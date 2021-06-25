@@ -3,7 +3,7 @@
    * @see https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions
    */
 
-  // Función tradicional
+  // Función tradicional/pura
   function sum(a) {
     return a + 100;
   }
@@ -19,5 +19,5 @@
   (a) => a + 100;
 
   // 3. Suprime los paréntesis de los argumentos
-  a => a + 100;
+  (a) => a + 100;
 })();
