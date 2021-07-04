@@ -1,0 +1,17 @@
+div .holamundo {
+  color: red;
+}
+
+p#pepitoPagaDoble {
+  color: blue;
+}
+
+#pepitoPagaDoble {
+}
+
+div.container * {
+}
+
+[class$="-item"] {
+  background-color: red;
+}
