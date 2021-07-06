@@ -31,6 +31,7 @@ class Dog {
 }
 
 const Luis = new Human();
+const Sergio = new Human();
 const Canela = new Dog("Canela");
 
 /**
