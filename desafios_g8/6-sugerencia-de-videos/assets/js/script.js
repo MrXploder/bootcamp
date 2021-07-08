@@ -43,6 +43,7 @@ const publicFunction = function (url, id) {
  * Clase Multimedia que crea nuevo objetos Multimedia
  */
 class Multimedia {
+  #url;
   /**
    *
    * @param {*} url
@@ -83,6 +84,7 @@ class Multimedia {
  *
  */
 class Reproductor extends Multimedia {
+  #id;
   /**
    *
    * @param {*} url
