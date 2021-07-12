@@ -40,10 +40,6 @@ class Animal {
 }
 
 class Leon extends Animal {
-  constructor(...args) {
-    super(...args);
-  }
-
   Rugir(player) {
     player.src = `./assets/sounds/Rugido.mp3`;
     player.load();
@@ -52,10 +48,6 @@ class Leon extends Animal {
 }
 
 class Lobo extends Animal {
-  constructor(...args) {
-    super(...args);
-  }
-
   Aullar(player) {
     player.src = `./assets/sounds/Aullido.mp3`;
     player.load();
@@ -64,10 +56,6 @@ class Lobo extends Animal {
 }
 
 class Oso extends Animal {
-  constructor(...args) {
-    super(...args);
-  }
-
   Gruñir(player) {
     player.src = `./assets/sounds/Gruñido.mp3`;
     player.load();
@@ -76,10 +64,6 @@ class Oso extends Animal {
 }
 
 class Serpiente extends Animal {
-  constructor(...args) {
-    super(...args);
-  }
-
   Sisear(player) {
     player.src = `./assets/sounds/Siseo.mp3`;
     player.load();
@@ -88,10 +72,6 @@ class Serpiente extends Animal {
 }
 
 class Aguila extends Animal {
-  constructor(...args) {
-    super(...args);
-  }
-
   Chillar(player) {
     player.src = `./assets/sounds/Chillido.mp3`;
     player.load();
