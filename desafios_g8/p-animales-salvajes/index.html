@@ -22,71 +22,59 @@
 
         <div
           id="Animales"
-          class="
-            my-3
-            p-3
-            d-flex
-            align-items-start
-            justify-content-start
-            flex-wrap
-            bg-dark
-          "
+          class="my-3 p-3 d-flex align-items-start justify-content-start flex-wrap bg-dark"
         ></div>
       </div>
       <div class="card col-12 col-sm-4 bg-warning text-dark offset-1 shadow-lg">
-        <form id="formulario">
-          <div class="card-body">
-            <h5 class="card-title">Registrar animal en:</h5>
-            <h6 class="card-subtitle mb-2 text-muted">
-              Ingrese los datos del animal
-            </h6>
-            <hr />
-            <div class="card-text my-3">
-              <div class="form-group">
-                <label for="exampleInputPassword1">Nombre del animal:</label>
-                <select class="form-control bg-dark text-white" id="animal">
-                  <option disabled selected>Seleccione un animal</option>
-                  <option value="Leon.png">León</option>
-                  <option value="Lobo.jpg">Lobo</option>
-                  <option value="Oso.jpg">Oso</option>
-                  <option value="Serpiente.jpg">Serpiente</option>
-                  <option value="Aguila.png">Águila</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="exampleInputPassword1"
-                  >Años de edad estimados:</label
-                >
-                <select class="form-control bg-dark text-white" id="edad">
-                  <option disabled selected>Seleccione un rango de años</option>
-
-                  <option value="0 - 1 años">0 - 1 años</option>
-                  <option value="1 - 3 años">1 - 3 años</option>
-                  <option value="3 - 5 años">3 - 5 años</option>
-                  <option value="5 - 8 años">5 - 8 años</option>
-                  <option value="8 - 10 años">8 - 10 años</option>
-                  <option value="Más de 10 años">Más de 10 años</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="exampleInputPassword1">Comentarios:</label>
-                <textarea
-                  rows="5"
-                  class="form-control shadow-lg bg-dark text-white"
-                  id="comentarios"
-                ></textarea>
-              </div>
-
-              <div class="p-5 card bg-dark">
-                <img id="preview"></img>
-              </div>
+        <div class="card-body">
+          <h5 class="card-title">Registrar animal en:</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            Ingrese los datos del animal
+          </h6>
+          <hr />
+          <div class="card-text my-3">
+            <div class="form-group">
+              <label for="exampleInputPassword1">Nombre del animal:</label>
+              <select class="form-control bg-dark text-white" id="animal">
+                <option disabled selected>Seleccione un animal</option>
+                <option value="Leon">León</option>
+                <option value="Lobo">Lobo</option>
+                <option value="Oso">Oso</option>
+                <option value="Serpiente">Serpiente</option>
+                <option value="Aguila">Águila</option>
+              </select>
             </div>
 
-            <btn class="" type="submit" id="btnRegistrar">Agregar</btn>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Años de edad estimados:</label>
+              <select class="form-control bg-dark text-white" id="edad">
+                <option disabled selected>Seleccione un rango de años</option>
+
+                <option value="0 - 1 años">0 - 1 años</option>
+                <option value="1 - 3 años">1 - 3 años</option>
+                <option value="3 - 5 años">3 - 5 años</option>
+                <option value="5 - 8 años">5 - 8 años</option>
+                <option value="8 - 10 años">8 - 10 años</option>
+                <option value="Más de 10 años">Más de 10 años</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">Comentarios:</label>
+              <textarea
+                rows="5"
+                class="form-control shadow-lg bg-dark text-white"
+                id="comentarios"
+              ></textarea>
+            </div>
+
+            <div class="p-5 card bg-dark">
+              <img id="preview"></img>
+            </div>
           </div>
-        </form>
+
+          <btn class="btn btn-light d-block" id="btnRegistrar">Agregar</btn>
+        </div>
       </div>
     </div>
 
@@ -115,6 +103,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="assets/js/index.js"></script>
+    <script type="module" src="assets/js/app.js"></script>
   </body>
 </html>
