@@ -19,7 +19,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <section>
         <img src="img/sh1.jpg" />
       </section>
@@ -39,7 +39,34 @@
         </form>
       </section>
 
-      <section id="request-section"></section>
+      <section>
+        <div class="card" id="tarjeta-superheroe">
+          <div class="row">
+            <div class="col-12 col-sm-5">
+              <div class="col-12 col-sm-6">
+                <img src="" alt="" id="imagen" class="img-fluid" />
+              </div>
+              <div class="col-12 col-sm-6">
+                <h1 id="nombre"></h1>
+                <p id="publicadopor"></p>
+                <hr />
+                <p id="ocupacion"></p>
+                <hr />
+                <p id="aparicion"></p>
+                <hr />
+                <p id="altura"></p>
+                <hr />
+                <p id="peso"></p>
+                <hr />
+                <p id="alianzas"></p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5">
+              <div id="chartContainer" style="height: 370px; width: 100%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script
@@ -57,6 +84,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
