@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniDesafio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <app-usuarios></app-usuarios>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+      Vue.component("app-usuarios", {
+        template: `
+          <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">RUN</th>
+                  <th scope="col">Fecha de Nacimiento</th>
+                  <th scope="col">Edad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(persona, $index) in personas" :key="$index">
+                  <th>{{ $index }}</th>
+                  <th>{{ persona.nombre }}</th>
+                  <td>{{ persona.apellido }}</td>
+                  <td>{{ persona.run }}</td>
+                  <td>{{ persona.fec_naciemiento }}</td>
+                  <td>{{ persona.edad }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button class="btn btn-primary" @click="borrarUltimo">Borrar el ultimo</button>
+
+            <br />
+            <input type="text" placeholder="Nombre" v-model="nuevaPersona.nombre"/>
+            <input type="text" placeholder="Apellido" v-model="nuevaPersona.apellido" />
+            <input type="text" placeholder="RUN" v-model="nuevaPersona.run" />
+            <input type="text" placeholder="Fecha de Nacimiento" v-model="nuevaPersona.fec_naciemiento" />
+            <input type="number" placeholder="Edad" v-model.number="nuevaPersona.edad" />
+            <button class="btn btn-secondary" @click="agregarPersona">Agregar persona</button>
+          </div>
+        `,
+        data: () => ({
+          nuevaPersona: {
+            nombre: "",
+            apellido: "",
+            run: "",
+            fec_nacimiento: "",
+            edad: 0,
+          },
+          personas: [],
+        }),
+        methods: {
+          borrarUltimo() {
+            this.personas.pop();
+          },
+          agregarPersona() {
+            this.personas.push({ ...this.nuevaPersona });
+            // this.personas.push(JSON.parse(JSON.stringify(this.nuevaPersona)));
+          },
+        },
+        mounted() {
+          fetch("https://run.mocky.io/v3/85aef1fa-00af-45db-8146-0724a3654386")
+            .then((response) => response.json())
+            .then((json) => (this.personas = json));
+        },
+      });
+
+      new Vue({
+        el: "#app",
+      });
+    </script>
+  </body>
+</html>

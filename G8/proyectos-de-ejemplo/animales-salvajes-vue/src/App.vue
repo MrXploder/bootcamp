@@ -1,19 +1,7 @@
 <template>
-	<div>
-		<div class="row">
-			<AnimalsList :animal-list="AnimalList" />
-			<AnimalsForm :animal-types="AnimalTypes" @add-animal="handleOnAnimalAdd($event)" />
-		</div>
-
-		<audio id="player" class="d-none"></audio>
-
-		<div class="modal fade" id="modal">
-			<div class="modal-dialog modal-dialog-centered w-25" role="document">
-				<div class="modal-content bg-dark p-3">
-					<div class="modal-body text-white" id="modal-body"></div>
-				</div>
-			</div>
-		</div>
+	<div class="row">
+		<AnimalsList :animal-list="AnimalList" />
+		<AnimalsForm :animal-types="AnimalTypes" @add-animal="handleOnAddAnimal($event)" />
 	</div>
 </template>
 
@@ -37,7 +25,7 @@ export default {
 			.then((data) => (this.AnimalTypes = data.animales))
 	},
 	methods: {
-		handleOnAnimalAdd(animal) {
+		handleOnAddAnimal(animal) {
 			this.AnimalList.push(animal)
 		},
 	},
