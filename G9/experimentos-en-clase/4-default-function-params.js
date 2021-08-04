@@ -6,6 +6,6 @@ function double(x = 1) {
 
 const doubler = (x = 1) => x * 2;
 
-double()
-double(1)
-double(2)
+double();
+double(1);
+double(2);
