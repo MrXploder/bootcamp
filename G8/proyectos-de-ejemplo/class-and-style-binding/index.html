@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Vue</title>
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+      p {
+        font-size: 10px;
+      }
+
+      .font-style-italic {
+        font-style: italic;
+      }
+
+      .font-size-13 {
+        font-size: 13px;
+      }
+
+      .small {
+        font-size: 13px;
+      }
+
+      .big {
+        font-size: 26px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <p>{{ greeting }}</p>
+      <p v-html="`<div>${greeting}</div>`"></p>
+      <input
+        :type="type"
+        @focus="log"
+        @input="log"
+        @blur="log"
+        @keydown.65="log"
+        @keydown.enter="log"
+        @keydown.esc="log"
+      />
+
+      <p
+        :class="{'small': fontSize === '13px', 'big': fontSize === '26px'}"
+        class="font-style-italic"
+      >
+        {{greeting}} - {{docsURL}}
+      </p>
+      <p
+        :style="{'color': color, 'font-size': fontSize}"
+        style="font-style: italic"
+      >
+        {{greetingDocsURL}}
+      </p>
+
+      <p :style="computedPStyles">{{greeting}} - {{docsURL}}</p>
+
+      <p :class="PClasses">hhh: {{greeting}} - {{docsURL}}</p>
+
+      <button @click="toggleTextColor()">Intercambiar color</button>
+      <button @click="toggleTextFontSize()">
+        Intercambiar tamaño de texto
+      </button>
+      <p>color: {{color}}</p>
+      <p>fontSize: {{fontSize}}</p>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: () => ({
+          greeting: "Welcome to your Vue.js app!",
+          docsURL: "http://vuejs.org/guide/",
+          discordURL: "https://chat.vuejs.org",
+          forumURL: "http://forum.vuejs.org/",
+          type: "password",
+          color: "red",
+          fontSize: "13px",
+          pStyles: {
+            color: "red",
+            fontSize: "13px",
+          },
+          PClasses: {
+            small: this.fontSize === "13px",
+            big: this.fontSize === "26px",
+          },
+        }),
+        computed: {
+          greetingDocsURL() {
+            return `${this.greeting} - ${this.docsURL}`;
+          },
+          computedPStyles() {
+            if (this.color === "red") {
+              return { ...this.pStyles };
+            } else {
+              return { ...this.pStyles, fontStyle: "italic" };
+            }
+          },
+        },
+        methods: {
+          humanizeURL: function (url) {
+            return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+          },
+          log(event) {
+            console.log(event);
+          },
+          toggleTextColor() {
+            console.log(this.color);
+            if (this.color === "red") {
+              this.color = "blue";
+            } else {
+              this.color = "red";
+            }
+          },
+          toggleTextFontSize() {
+            if (this.fontSize === "13px") {
+              this.fontSize = "26px";
+            } else {
+              this.fontSize = "13px";
+            }
+          },
+          toggle() {
+            this.toggleTextColor();
+            this.toggleTextFontSize();
+          },
+        },
+        created() {
+          console.log("created");
+        },
+        mounted() {
+          console.log("mounted");
+        },
+        updated() {
+          console.log("updated");
+        },
+        destroy() {
+          console.log("destroy");
+        },
+      });
+    </script>
+
+    <script>
+      //spread y rest operator;
+
+      // ...
+
+      // function persona(...args){
+      //   args[0]; // nombre;
+      //   args[1]; //apellido;
+      // }
+
+      // const numeros = [1, 2, 3, 4, 5];
+      // const primero = numeros[0];
+      // const ultimos = numeros.slice(1);
+
+      // const [primernumero, ...restodenumeros] = numeros
+
+      // const persona = {
+      //   nombre: "",
+      //   apellido: "",
+      //   otracosa: "",
+      //   edad: 0,
+      // }
+
+      // const edadPersona = persona.edad;
+      // const restoPersona = {nombre: persona.nombre, apellido: persona.apellido}
+
+      // const {edad: edadPersona, ...restoDePersona} = persona
+
+      const persona = {
+        nombre: "",
+      };
+
+      const personita = persona;
+
+      persona.nombre = "Luis";
+
+      personita.nombre; //"Luis"
+
+      ///////////////
+
+      const personirijilla = JSON.parse(JSON.stringify(persona));
+
+      const personirijillija = { ...persona };
+
+      function o() {
+        return {
+          hola: "mundo",
+        };
+      }
+
+      const mensaje = { saludo: "hola", ...o() };
+
+      const numerosBase = [1, 2, 3, 4, 5];
+      const numerosAlterno = [6, 7, 8, 9, 10];
+
+      const suma = [numerosBase, numerosAlterno]; // [[1, 2, 3, 4, 5], [6, 7 ,8, 9, 10]];
+      const sumatoria = [...numerosBase, ...numerosAlterno]; // [1, 2, 3, 4, 5, 6,7,8,9,10];
+
+      const numerosRepetidos = [1, 2, 1, 3, 4, 5, 6, 5, 7, 8, 9, 10];
+      const numerosSinRepetir = new Set(numerosRepetidos);
+
+      const numerosComoArreglo = [...numerosSinRepetir];
+
+      const resultado = [...new Set([1, 2, 1, 3, 4, 5, 6, 5, 7, 8, 9, 10])];
+    </script>
+  </body>
+</html>
