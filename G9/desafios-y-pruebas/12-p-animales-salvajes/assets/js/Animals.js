@@ -4,34 +4,30 @@ import { Animal } from "./Animal.js";
 
 export class Leon extends Animal {
   Rugir() {
-    console.log("Roooar!");
+    this.playerPlay();
   }
 }
 
 export class Lobo extends Animal {
   Aullar() {
-    console.log("Auuuu!");
+    this.playerPlay();
   }
 }
 
 export class Oso extends Animal {
   Gruñir() {
-    console.log("Grrrrr!");
+    this.playerPlay();
   }
 }
 
 export class Serpiente extends Animal {
-  constructor(...args) {
-    super(...args);
-  }
-
   Sisear() {
-    console.log("Zzzzz!");
+    this.playerPlay();
   }
 }
 
 export class Aguila extends Animal {
   Chillar() {
-    console.log("Iiiiii!");
+    this.playerPlay();
   }
 }

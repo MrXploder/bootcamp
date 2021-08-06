@@ -22,7 +22,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
 /* Tabla de Participantes */
 
 #Animales {
@@ -34,7 +33,7 @@ body {
   transition: all 200ms;
 }
 
-#Animales div >div:hover {
+#Animales div > div:hover {
   box-shadow: 0px 1px 5px 1px;
 }
 
@@ -44,7 +43,11 @@ body {
 
 /* Modal */
 
-.modal-dialog{
-    max-width: 85% !important;
+.modal-dialog {
+  max-width: 85% !important;
 }
 
+.img-small {
+  width: 100px;
+  height: 200px;
+}
