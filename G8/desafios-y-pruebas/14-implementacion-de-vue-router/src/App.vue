@@ -18,7 +18,7 @@
           <ul class="nav navbar-nav ml-auto" id="menu-v8">
             <li class="nav-item" role="presentation">
               <!-- REEMPLAZAR CON ELEMENTO ROUTER LINK A CON RUTA NOMBRADA -->
-              <a href="/">portada</a>
+              <router-link to="/inicio">Portada</router-link>
             </li>
             <li class="nav-item" role="presentation">
               <!-- REEMPLAZAR CON ELEMENTO ROUTER LINK A CON RUTA NOMBRADA -->
@@ -26,11 +26,11 @@
             </li>
             <li class="nav-item" role="presentation">
               <!-- REEMPLAZAR CON ELEMENTO ROUTER LINK A CON RUTA ESTÁTICA -->
-              <a href="/">contacto</a>
+              <router-link to="/contacto">Contacto</router-link>
             </li>
             <li class="nav-item" role="presentation">
               <!-- REEMPLAZAR CON ELEMENTO ROUTER LINK A RUTA ESTÁTICA -->
-              <a href="/post/1">último post</a>
+              <router-link to="/post/1">Ultimo Post</router-link>
             </li>
           </ul>
         </div>
