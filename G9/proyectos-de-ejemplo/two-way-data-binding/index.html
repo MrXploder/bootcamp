@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Vue</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <!-- <input id="nombre" /> -->
+    <div id="app">
+      <p v-once>{{nombre}}</p>
+      <input v-model="nombre" />
+
+      <p v-if="edad >= 65">Es viejito</p>
+      <p v-if="edad >= 0 && edad < 65">Es jovencito</p>
+
+      <p v-if=""></p>
+      <p v-else-if=""></p>
+      <p v-else-if=""></p>
+      <p v-else-if=""></p>
+      <p v-else-if=""></p>
+      <p v-else-if=""></p>
+      <p v-else></p>
+
+      <p v-show="edad >= 65">Es viejito con css</p>
+
+      <ol>
+        <li v-for="(elemento, $index) in elementos" :key="$index">
+          {{elemento}}
+        </li>
+      </ol>
+
+      <hr />
+      type = {{inputType}}
+      <input
+        :type="inputType"
+        v-model="contra"
+        placeholder="Escriba su contraseña"
+      />
+      <button @click="inputType = 'password'">Cambiar a password</button>
+      <button @click="inputType = 'text'">Cambiar a text</button>
+    </div>
+
+    <script>
+      // const nombreInputElement = document.getElementById("nombre");
+      // console.log(nombreInputElement);
+      // nombreInputElement.addEventListener("input", function (event) {
+      //   console.log(
+      //     "alguien escribio en el input => ",
+      //     nombreInputElement.value,
+      //     event
+      //   );
+      // });
+
+      var app = new Vue({
+        el: "#app",
+        data: {
+          contra: "",
+          inputType: "password",
+          nombre: "Cristian",
+          edad: 10,
+          elementos: ["pagar el netflix", "ir al super"],
+        },
+      });
+    </script>
+  </body>
+</html>
