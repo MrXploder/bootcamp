@@ -18,6 +18,11 @@
         <li class="nav-item">
           <router-link class="nav-link" :to="{ path: '/' }">Inicio</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" :to="{ path: '/busquedas' }"
+            >Busquedas</router-link
+          >
+        </li>
       </ul>
     </div>
   </nav>

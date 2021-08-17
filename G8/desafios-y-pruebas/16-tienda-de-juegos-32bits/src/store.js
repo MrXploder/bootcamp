@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
+    busquedaPorCodigo: "",
     juegos: [
       {
         codigo: "0001",
@@ -56,8 +57,18 @@ const store = new Vuex.Store({
       },
     ],
   },
-  getters: {},
-  mutations: {},
+  getters: {
+    productosFiltrados(state) {
+      return state.juegos.filter(
+        (juego) => juego.codigo === state.busquedaPorCodigo
+      );
+    },
+  },
+  mutations: {
+    SET_BUSQUEDA(state, value) {
+      state.busquedaPorCodigo = value;
+    },
+  },
   actions: {},
 });
 
