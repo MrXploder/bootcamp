@@ -63,6 +63,12 @@ const store = new Vuex.Store({
         (juego) => juego.codigo === state.busquedaPorCodigo
       );
     },
+    cantidadDeProductosConStock(state) {
+      return state.juegos.filter((juego) => juego.stock > 0).length;
+    },
+    productosConStock(state) {
+      return state.juegos.filter((juego) => juego.stock > 0);
+    },
   },
   mutations: {
     SET_BUSQUEDA(state, value) {

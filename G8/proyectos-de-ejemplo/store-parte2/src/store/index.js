@@ -6,6 +6,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     busquedaPorCodigo: "",
+    carritoDeCompras: [],
     juegos: [
       {
         codigo: "0001",
@@ -68,8 +69,35 @@ const store = new Vuex.Store({
     SET_BUSQUEDA(state, value) {
       state.busquedaPorCodigo = value;
     },
+    SUBSTRACT_STOCK(state, productIndex) {
+      state.juegos[productIndex].stock -= 1;
+    },
+    ADD_STOCK_TO_SHOPPINGLIST(state, productIndex) {
+      state.carritoDeCompras[productIndex].stock += 1;
+    },
+    ADD_VENTA(state, juego) {
+      state.carritoDeCompras.push(juego);
+    },
   },
-  actions: {},
+  actions: {
+    agregarProductoAlCarritoDeCompras({ state, commit }, { juego, $index }) {
+      const productoEnCarritoDeCompras = state.carritoDeCompras.findIndex(
+        (productoCarrito) => productoCarrito.codigo === juego.codigo
+      );
+
+      if (productoEnCarritoDeCompras !== -1) {
+        commit("ADD_STOCK_TO_SHOPPINGLIST", productoEnCarritoDeCompras);
+        commit("SUBSTRACT_STOCK", $index);
+      } else {
+        commit("ADD_VENTA", { ...juego, stock: 1 });
+        commit("SUBSTRACT_STOCK", $index);
+      }
+    },
+  },
+  async concretarVenta({ state, commit }) {},
+  agregarAlgoNuevo({ state }) {
+    Vue.set(state, "algoNuevo", "algo");
+  },
 });
 
 // camelCase            // variables
