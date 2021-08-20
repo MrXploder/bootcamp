@@ -7,6 +7,10 @@ export default new Router({
   mode: "history",
   routes: [
     {
+      path: "*",
+      component: () => import("./pages/404.vue"),
+    },
+    {
       path: "/",
       name: "inicio",
       component: () => import("./pages/Inicio.vue"),
