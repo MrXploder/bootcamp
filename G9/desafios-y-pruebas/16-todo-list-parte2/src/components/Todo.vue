@@ -4,7 +4,10 @@
 
     <TodoAdd @nueva-actividad="agregarNuevaActividad" />
 
-    <TodoList :actividades="actividades" />
+    <TodoList
+      :actividades="actividades"
+      @eliminar-actividad="eliminarActividad"
+    />
   </div>
 </template>
 
@@ -24,6 +27,9 @@ export default {
   methods: {
     agregarNuevaActividad(nuevaActividad) {
       this.actividades.push(nuevaActividad);
+    },
+    eliminarActividad(indiceActividad) {
+      this.actividades.splice(indiceActividad, 1);
     },
   },
 };

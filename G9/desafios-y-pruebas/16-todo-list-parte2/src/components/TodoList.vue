@@ -5,6 +5,7 @@
     <ul>
       <li v-for="(actividad, $index) in actividades" :key="$index">
         {{ actividad }}
+        <button @click="$emit('eliminar-actividad', $index)">R</button>
       </li>
     </ul>
   </div>
