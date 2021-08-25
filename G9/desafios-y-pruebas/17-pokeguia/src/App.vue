@@ -8,11 +8,18 @@
       <input type="text" v-model="nombreDelPokemon" />
       <button @click="clickBotonBuscar()">Buscar</button>
     </div>
+
+    <ExampleFetch />
+    <ExampleAxios />
   </div>
 </template>
 
 <script>
+import ExampleFetch from "./components/ExampleFetch.vue";
+import ExampleAxios from "./components/ExampleAxios.vue";
+
 export default {
+  components: { ExampleFetch, ExampleAxios },
   name: "App",
   data: () => ({
     nombreDelPokemon: "",
