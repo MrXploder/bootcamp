@@ -1,28 +1,113 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     productList: [
-      { name: "Casa", id: "0", price: 100.0 },
-      { name: "Bote", id: "1", price: 100.0 },
-      { name: "Avión", id: "2", price: 100.0 },
-      { name: "Motocicleta", id: "3", price: 100.0 },
-      { name: "Computadora", id: "4", price: 100.0 },
-      { name: "Silla", id: "5", price: 100.0 },
-      { name: "Espejo", id: "6", price: 100.0 },
-      { name: "Mesa", id: "7", price: 100.0 },
-      { name: "Café", id: "8", price: 100.0 },
-      { name: "Bicicleta", id: "9", price: 100.0 },
-      { name: "Gato", id: "10", price: 100.0 },
-      { name: "Parlante", id: "11", price: 100.0 },
-      { name: "Plancha", id: "12", price: 100.0 },
-      { name: "Libro", id: "13", price: 100.0 },
-    ],
+      {
+        name: 'Casa',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Bote',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Avión',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Motocicleta',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Computadora',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Silla',
+        price: 100,
+        color: 'red',
+        category: 'Other',
+        discount: 10
+      },
+      {
+        name: 'Espejo',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Mesa',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Café',
+        price: 100,
+        color: 'red',
+        category: 'Food'
+      },
+      {
+        name: 'Bicicleta',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Gato',
+        price: 100,
+        color: 'red',
+        category: 'Pets',
+        discount: 20
+      },
+      {
+        name: 'Parlante',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Plancha',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      },
+      {
+        name: 'Libro',
+        price: 100,
+        color: 'red',
+        category: 'Other'
+      }
+    ]
   },
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+  mutations: {
+    ADD_PRODUCT(state, newProduct) {
+      state.productList.push(newProduct)
+    }
+  },
+  actions: {
+    async agregarProducto(context, newProduct) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          context.commit('ADD_PRODUCT', { ...newProduct })
+          resolve()
+        }, 2000)
+      })
+    }
+  },
+  modules: {}
+})

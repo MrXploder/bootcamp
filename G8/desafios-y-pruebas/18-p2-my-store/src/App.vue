@@ -5,6 +5,7 @@
       |
       <router-link to="/newproduct">Nuevo Producto</router-link>
     </div>
+    <br />
     <router-view />
   </div>
 </template>
