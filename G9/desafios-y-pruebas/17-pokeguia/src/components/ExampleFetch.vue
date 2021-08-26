@@ -1,17 +1,23 @@
 <template>
-  <div></div>
+  <div>
+    <button @click="actualizarPokemon()"></button>
+  </div>
 </template>
 
 <script>
 export default {
   created() {
-    fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-      .then((response) => {
-        return response.json();
-      })
-      .then((datosDelPokemon) => {
-        console.log({ conFetch: datosDelPokemon });
-      });
+    this.apiPokemon();
+  },
+  methods: {
+    actualizarPokemon() {
+      this.apiPokemon();
+    },
+    async apiPokemon() {
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon/pikachu");
+      const pokemon = await response.json();
+      console.log(pokemon);
+    },
   },
 };
 </script>
