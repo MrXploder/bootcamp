@@ -9,6 +9,8 @@
       <button @click="clickBotonBuscar()">Buscar</button>
     </div>
 
+    <pre>{{ pokemonQueSeTrajoDeInternet }}</pre>
+
     <ExampleFetch />
     <ExampleAxios />
   </div>
@@ -23,10 +25,17 @@ export default {
   name: "App",
   data: () => ({
     nombreDelPokemon: "",
+    pokemonQueSeTrajoDeInternet: null,
   }),
   methods: {
     clickBotonBuscar() {
-      console.log("nombre del pokemon => ", this.nombreDelPokemon);
+      fetch(`https://pokeapi.co/api/v2/pokemon/${this.nombreDelPokemon}`)
+        .then((response) => {
+          return response.json();
+        })
+        .then((loQueSeaQueMeTrajeDeInternet) => {
+          this.pokemonQueSeTrajoDeInternet = loQueSeaQueMeTrajeDeInternet;
+        });
     },
   },
 };
