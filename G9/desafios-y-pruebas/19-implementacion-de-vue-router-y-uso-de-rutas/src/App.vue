@@ -1,6 +1,12 @@
 <template>
   <div>
     <Navbar />
+    <Header
+      v-if="$route.meta.header"
+      :title="$route.meta.title"
+      :subTitle="$route.meta.subTitle"
+      :backgroundImg="$route.meta.backgroundImg"
+    />
     <!-- ROUTER VIEW QUE CARGARÁ LAS VISTAS (INICIO, SOBRE MÍ, CONTACTO, ETC.) -->
     <router-view />
 
@@ -11,9 +17,11 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import Header from "./components/Header.vue";
+
 export default {
   name: "App",
-  components: { Navbar, Footer },
+  components: { Navbar, Footer, Header },
 };
 </script>
 

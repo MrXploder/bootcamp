@@ -25,7 +25,7 @@
           </li>
           <li class="nav-item" role="presentation">
             <!-- REEMPLAZAR CON ELEMENTO ROUTER LINK A CON RUTA ESTÁTICA -->
-            <a href="/">contacto</a>
+            <a href="/contacto">contacto</a>
           </li>
           <li class="nav-item" role="presentation">
             <!-- REEMPLAZAR CON ELEMENTO ROUTER LINK A RUTA ESTÁTICA -->
