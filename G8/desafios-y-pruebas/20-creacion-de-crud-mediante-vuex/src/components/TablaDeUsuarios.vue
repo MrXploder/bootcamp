@@ -1,5 +1,9 @@
 <template>
-  <v-data-table :headers="headers" :items="$store.state.usuarios.lista"></v-data-table>
+  <v-data-table :headers="headers" :items="$store.state.usuarios.lista">
+    <template #no-data>
+      <v-btn icon x-large color="orange"> =( </v-btn>
+    </template>
+  </v-data-table>
 </template>
 
 <script>
