@@ -3,12 +3,10 @@
     <section>
       <h3>Filtro</h3>
       <input
-        type="number"
+        type="text"
         placeholder="Escriba el nombre del producto"
         :value="$store.state.busqueda"
-        @input="
-          $store.dispatch('setBusqueda', Number.parseInt($event.target.value))
-        "
+        @input="$store.dispatch('setBusqueda', $event.target.value)"
       />
 
       <Juegos
