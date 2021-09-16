@@ -3,18 +3,13 @@
     <v-layout justify-center>
       <v-flex xs9>
         <h3>Crear Usuario</h3>
-        <UserForm @submit="handleLoginFormSubmit" />
+        <UserForm @submit="handleCreateUserFormSubmit" />
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
-import Firebase from 'firebase'
-import { firebaseConfig } from '../../firebase-config'
-
-Firebase.initializeApp(firebaseConfig)
-
 import UserForm from '../components/UserForm.vue'
 
 export default {
@@ -22,17 +17,13 @@ export default {
   name: 'LoginPage',
 
   methods: {
-    handleLoginFormSubmit($event) {
-      Firebase.auth()
-        .signInWithEmailAndPassword($event.email, $event.password)
-        .then(
-          () => {
-            this.$router.push('home')
-          },
-          () => {
-            console.error('El usuario no existe, intente denuevo')
-          }
-        )
+    async handleCreateUserFormSubmit(credentials) {
+      try {
+        await this.$store.dispatch('session/createUser', credentials)
+        this.$router.push('/home')
+      } catch (e) {
+        console.error(e)
+      }
     }
   }
 }

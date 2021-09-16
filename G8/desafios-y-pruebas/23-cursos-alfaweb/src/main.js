@@ -4,7 +4,11 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 
+import './plugins/simple-rules'
+
 Vue.config.productionTip = false
+
+store.dispatch('system/initializeFirebase')
 
 new Vue({
   router,

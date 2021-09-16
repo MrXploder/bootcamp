@@ -7,17 +7,10 @@
     fixed
     app
   >
-    <v-list v-if="$store.getters['session/currentUser']">
-      <v-list-item class="px-2">
-        <v-list-item-avatar>
-          <v-img :src="$store.getters['session/currentUser'].img"></v-img>
-        </v-list-item-avatar>
-      </v-list-item>
-
+    <v-list v-if="$store.state.session.user">
       <v-list-item link>
         <v-list-item-content>
-          <v-list-item-title class="text-h6"> {{ $store.getters['session/currentUser'].name }} </v-list-item-title>
-          <v-list-item-subtitle>{{ $store.getters['session/currentUser'].email }}</v-list-item-subtitle>
+          <v-list-item-title class="text-h6"> {{ $store.state.session.user.email }} </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -46,13 +39,23 @@ export default {
     items: [
       {
         icon: 'mdi-apps',
-        title: 'Welcome',
+        title: 'Inicio',
         to: '/'
       },
       {
-        icon: 'mdi-chart-bubble',
-        title: 'Inspire',
-        to: '/inspire'
+        icon: 'mdi-login',
+        title: 'Login',
+        to: '/login'
+      },
+      {
+        icon: 'mdi-account-plus',
+        title: 'Registrarse',
+        to: '/sign-in'
+      },
+      {
+        icon: 'mdi-account-multiple-check',
+        title: 'Administración',
+        to: '/admin'
       }
     ]
   })

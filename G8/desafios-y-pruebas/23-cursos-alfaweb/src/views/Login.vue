@@ -10,11 +10,6 @@
 </template>
 
 <script>
-import Firebase from 'firebase'
-import { firebaseConfig } from '../../firebase-config'
-
-Firebase.initializeApp(firebaseConfig)
-
 import UserForm from '../components/UserForm.vue'
 
 export default {
@@ -22,17 +17,13 @@ export default {
   name: 'LoginPage',
 
   methods: {
-    handleLoginFormSubmit($event) {
-      Firebase.auth()
-        .signInWithEmailAndPassword($event.email, $event.password)
-        .then(
-          () => {
-            this.$router.push('home')
-          },
-          () => {
-            console.error('El usuario no existe, intente denuevo')
-          }
-        )
+    async handleLoginFormSubmit(credentials) {
+      try {
+        await this.$store.dispatch('session/login', credentials)
+        this.$router.push('/home')
+      } catch (e) {
+        console.error(e)
+      }
     }
   }
 }
