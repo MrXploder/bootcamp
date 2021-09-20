@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="dialog">
     <template #activator="{ on }">
-      <v-btn v-on="on" color="info">Agregar curso</v-btn>
+      <v-btn v-on="on" color="info">{{ $t('views.grades.grade.buttons.add') }}</v-btn>
     </template>
     <v-card>
       <v-card-title> Agregando curso </v-card-title>

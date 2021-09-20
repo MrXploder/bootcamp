@@ -1,0 +1,69 @@
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.25s ease;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--v-theme-layout-base);
+  color: var(--v-theme-color-base) !important;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  display: block;
+  background: var(--v-theme-layout-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--v-theme-color-base);
+  border-radius: 5px;
+}
+
+::-moz-selection {
+  background: rgba(37, 100, 255, 0.15);
+}
+
+::selection {
+  background: rgba(37, 100, 255, 0.15);
+}
+
+p {
+  font-size: 13.6px;
+  margin-bottom: unset !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.word-break-word {
+  word-break: break-word;
+}
+
+@media (min-width: 960px) {
+  .v-application .px-md-32 {
+    padding-right: 128px !important;
+    padding-left: 128px !important;
+  }
+}

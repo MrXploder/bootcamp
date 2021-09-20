@@ -1,5 +1,5 @@
 <template>
-  <v-data-table :items="$store.state.grades.grades.data" :headers="headers">
+  <v-data-table :items="$store.state.grades.grades.data" :headers="headers" style="width: 100%">
     <template v-slot:[`item.price`]="{ item }">
       <v-chip color="success">${{ item.price.toLocaleString() }}</v-chip>
     </template>
@@ -32,33 +32,33 @@ import { Vue, Component } from 'vue-property-decorator'
 export default class GradesTable extends Vue {
   public get headers() {
     return [
-      { text: 'Nombre', value: 'name' },
+      { text: this.$t('views.grades.gradesTable.headers.name'), value: 'name' },
       {
-        text: 'Cupos',
+        text: this.$t('views.grades.gradesTable.headers.quotas'),
         value: 'quotas'
       },
       {
-        text: 'Inscritos',
+        text: this.$t('views.grades.gradesTable.headers.enrolled'),
         value: 'enrolled'
       },
       {
-        text: 'Duración',
+        text: this.$t('views.grades.gradesTable.headers.span'),
         value: 'span'
       },
       {
-        text: 'Costo',
+        text: this.$t('views.grades.gradesTable.headers.price'),
         value: 'price'
       },
       {
-        text: 'terminado',
+        text: this.$t('views.grades.gradesTable.headers.status'),
         value: 'status'
       },
       {
-        text: 'Fecha',
+        text: this.$t('views.grades.gradesTable.headers.date'),
         value: 'date'
       },
       {
-        text: 'Acciones',
+        text: this.$t('views.grades.gradesTable.headers.actions'),
         value: 'actions'
       }
     ]

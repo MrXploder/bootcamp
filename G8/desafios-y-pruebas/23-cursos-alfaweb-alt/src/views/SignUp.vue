@@ -2,7 +2,7 @@
   <v-container>
     <v-layout justify-center>
       <v-flex xs9>
-        <h3>Crear Usuario</h3>
+        <h3>{{ $t('views.signup.title') }}</h3>
         <UserForm @submit="handleCreateUserFormSubmit" />
       </v-flex>
     </v-layout>
@@ -17,7 +17,7 @@ import type { ICredentials } from '@/store/modules/session/session.interface'
 
 @Component({
   components: {
-    UserForm: () => import('@/components/UserForm.vue')
+    UserForm: () => import('@/components/Users/UserForm.vue')
   }
 })
 export default class SignUpView extends Vue {

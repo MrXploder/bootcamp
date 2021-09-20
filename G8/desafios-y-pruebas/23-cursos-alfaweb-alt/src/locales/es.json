@@ -1,0 +1,64 @@
+{
+  "visiblePathNames": {
+    "home": "Inicio",
+    "signin": "Ingresar",
+    "signup": "Registrarse",
+    "grades": "Cursos"
+  },
+  "views": {
+    "signin": {
+      "title": "Inicia sesión con tus credenciales de Alfaweb"
+    },
+    "signup": {
+      "title": "Crea una cuenta en Alfaweb"
+    },
+    "grades": {
+      "title": "Administración de Cursos",
+      "gradesTable": {
+        "headers": {
+          "name": "Nombre",
+          "quotas": "Cupos",
+          "enrolled": "Inscritos",
+          "span": "Duración",
+          "price": "Costo",
+          "status": "Terminado",
+          "statusTextTrue": "Si",
+          "statusTextFalse": "No",
+          "date": "Fecha",
+          "dateVerbose": "Fecha de registro",
+          "actions": "Acciones",
+          "description": "Descripción"
+        }
+      },
+      "grade": {
+        "buttons": {
+          "add": "Agregar curso"
+        }
+      }
+    }
+  },
+  "useCases": {
+    "forms": {
+      "rules": {
+        "required": "Este campo es obligatorio"
+      },
+      "buttons": {
+        "reset": "Limpiar formulario",
+        "resetValidation": "Limpiar validación",
+        "validate": {
+          "update": "Actualizar",
+          "start": "Iniciar",
+          "create": "Crear"
+        }
+      },
+      "inputs": {
+        "email": {
+          "label": "Correo electrónico"
+        },
+        "password": {
+          "label": "Contraseña"
+        }
+      }
+    }
+  }
+}

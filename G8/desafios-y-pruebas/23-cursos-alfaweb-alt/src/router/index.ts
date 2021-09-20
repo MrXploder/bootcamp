@@ -17,19 +17,26 @@ const routes = [
   {
     name: 'SignIn',
     path: '/sign-in',
-    component: () => import('@/views/SignIn.vue')
+    component: () => import('@/views/SignIn.vue'),
+    meta: {
+      layout: 'simple'
+    }
   },
   {
     name: 'SignUp',
     path: '/sign-up',
-    component: () => import('@/views/SignUp.vue')
+    component: () => import('@/views/SignUp.vue'),
+    meta: {
+      layout: 'simple'
+    }
   },
   {
     name: 'Home',
     path: '/home',
     component: () => import('@/views/Home.vue'),
     meta: {
-      private: true
+      private: true,
+      title: 'Hola!'
     }
   },
   {
@@ -37,7 +44,8 @@ const routes = [
     path: '/grades',
     component: () => import('@/views/Grades.vue'),
     meta: {
-      private: true
+      private: true,
+      title: 'Listado de Cursos'
     }
   },
   {
@@ -45,7 +53,8 @@ const routes = [
     path: '/grade/:gradeId',
     component: () => import('@/views/GradeDetails.vue'),
     meta: {
-      private: true
+      private: true,
+      title: 'Detalle de Cursos'
     }
   }
 ]

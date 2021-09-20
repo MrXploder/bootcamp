@@ -1,12 +1,6 @@
 <template>
   <v-container>
     <section>
-      <v-layout justify-center class="mb-4">
-        <h1>Administración</h1>
-      </v-layout>
-    </section>
-
-    <section>
       <v-layout>
         <GoToAddGradeBtn />
       </v-layout>
