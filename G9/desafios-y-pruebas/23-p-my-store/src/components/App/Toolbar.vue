@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">PanCalientito</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -28,7 +28,8 @@ export default {
   data: () => ({
     items: [
       { text: 'Inicio', to: '/' },
-      { text: 'Nuevo producto', to: '/nuevo-producto' }
+      { text: 'Nuevo producto', to: '/nuevo-producto' },
+      { text: 'Carrito de Compras', to: '/carrito' }
     ]
   })
 }
