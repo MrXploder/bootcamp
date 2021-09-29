@@ -13,6 +13,9 @@
         {{ producto.oferta ? `${producto.descuento}% off` : 'Sin descuento asociado' }}
       </li>
     </ul>
+    <div class="card-actions">
+      <button class="btn btn-info" @click="agregarProductoAlCarrito">Agregar al carrito</button>
+    </div>
   </div>
 </template>
 
@@ -20,6 +23,11 @@
 export default {
   props: {
     producto: { type: Object, required: true }
+  },
+  methods: {
+    agregarProductoAlCarrito() {
+      this.$store.dispatch('carrito/agregarProducto', this.producto)
+    }
   }
 }
 </script>

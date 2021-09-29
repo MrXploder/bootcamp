@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
+import $IMDB from '../services/IMDB'
+
 Vue.use(Vuex)
 
 import { system } from './system.js'
