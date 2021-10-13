@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "predeploy": "yarn build",
+    "deploy": "npx firebase deploy --only hosting"
+
   },
   "dependencies": {
-    "core-js": "^3.6.5",
+    "core-js": "^3.18.1",
     "firebase": "8",
+    "firebase-tools": "^9.19.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

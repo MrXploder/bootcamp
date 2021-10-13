@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>hola mundo</h1>
+    <h1>Iniciar sesion</h1>
     <form @submit.prevent="pepitoDoble">
       <label for="correo">Correo</label>
       <input
