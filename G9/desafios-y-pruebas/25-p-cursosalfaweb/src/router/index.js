@@ -14,6 +14,21 @@ const routes = [
     name: "Home",
     component: () => import("../views/Home.vue"),
   },
+  {
+    path: "/cursos",
+    name: "Grade",
+    component: () => import("../views/Grades.vue"),
+  },
+  {
+    path: "/cursos/crear",
+    name: "GradeCreate",
+    component: () => import("../views/GradeCreate.vue"),
+  },
+  {
+    path: "/cursos/:id",
+    name: "GradeDetails",
+    component: () => import("../views/GradeEdit.vue"),
+  },
 ];
 
 const router = new VueRouter({

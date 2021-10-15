@@ -6,6 +6,7 @@ import vuetify from "./plugins/vuetify";
 
 import "./plugins/firebase";
 import "./plugins/vue-gravatar";
+import "./plugins/sweetalert2";
 
 Vue.config.productionTip = false;
 
@@ -19,4 +20,4 @@ new Vue({
 setTimeout(() => {
   document.getElementById("loading")?.classList.add("mounted");
   document.getElementsByTagName("html")[0].style.overflowY = "auto";
-}, 5000);
+}, 1000);
