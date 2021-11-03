@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import Axios from "axios";
 export default {
   components: {
     Navbar: () => import("./components/App/Navbar"),
@@ -27,6 +28,52 @@ export default {
   data: () => ({}),
   mounted() {
     this.$store.dispatch("session/subscribeToAuthStateChange");
+
+    this.startSpotify();
+  },
+  methods: {
+    async startSpotify() {
+      const clientId = "9240403d1d754f7998a82316e627f4c2";
+      const clientSecret = "ce6a3196dfd8466aac28f0c3ac710d6e";
+
+      const serialize = function (obj) {
+        var str = [];
+        for (var p in obj) {
+          // eslint-disable-next-line no-prototype-builtins
+          if (obj.hasOwnProperty(p)) {
+            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+          }
+        }
+        return str.join("&");
+      };
+
+      const tokenResponse = await Axios.post(
+        "https://accounts.spotify.com/api/token",
+        serialize({ grant_type: "client_credentials" }),
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization:
+              "Basic " +
+              new Buffer(`${clientId}:${clientSecret}`).toString("base64"),
+          },
+        }
+      );
+
+      console.log({ tokenResponse });
+
+      const artistResponse = await Axios.get(
+        // "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg",
+        "https://api.spotify.com/v1/users/jmperezperez",
+        {
+          headers: {
+            Authorization: `Bearer ${tokenResponse.data.access_token}`,
+          },
+        }
+      );
+
+      console.log({ artistResponse });
+    },
   },
 };
 </script>

@@ -41,20 +41,32 @@ export default {
     SignInDialog: () => import("../Sign/SignInDialog.vue"),
     SignOutDialog: () => import("../Sign/SignOutDialog.vue"),
   },
-  data: () => ({
-    links: [
-      {
-        text: "Inicio",
-        icon: "mdi-home",
-        to: "/home",
-      },
-      {
-        text: "Cursos",
-        icon: "mdi-apps",
-        to: "/cursos",
-      },
-    ],
-  }),
+  computed: {
+    links() {
+      const links = [
+        {
+          text: "Inicio",
+          icon: "mdi-home",
+          to: "/home",
+        },
+        {
+          text: "Cursos",
+          icon: "mdi-apps",
+          to: "/cursos",
+        },
+      ];
+
+      if (this.$store.getters["session/isAdmin"]) {
+        links.push({
+          text: "Admin",
+          icon: "mdi-shield-crown-outline",
+          to: "/admin",
+        });
+      }
+
+      return links;
+    },
+  },
 };
 </script>
 
