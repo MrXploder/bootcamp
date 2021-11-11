@@ -101,27 +101,27 @@ export default {
     },
   },
   mounted() {
-    // fetch('https://run.mocky.io/v3/06cf2c70-342c-4929-ab5f-9ef36b6bb825')
-    //   .then(response => {
-    //     return response.json()
-    //   })
-    //   .then(data => {
-    //     console.log(data)
-    //     return fetch('https://run.mocky.io/v3/27300d42-7ba9-4791-b3d8-5835046d8331')
-    //   })
-    //   .then(response => {
-    //     return response.json()
-    //   })
-    //   .then(data => {
-    //     console.log(data)
-    //     return fetch('https://run.mocky.io/v3/3ade5f1b-7be4-4f97-86d0-f92617768c38')
-    //   })
-    //   .then(response => {
-    //     return response.json()
-    //   })
-    //   .then(data => {
-    //     console.log(data)
-    //   })
+    fetch('https://run.mocky.io/v3/06cf2c70-342c-4929-ab5f-9ef36b6bb825')
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        console.log(data)
+        return fetch('https://run.mocky.io/v3/27300d42-7ba9-4791-b3d8-5835046d8331')
+      })
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        console.log(data)
+        return fetch('https://run.mocky.io/v3/3ade5f1b-7be4-4f97-86d0-f92617768c38')
+      })
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        console.log(data)
+      })
 
     this.fetchAsync()
   },
