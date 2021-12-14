@@ -1,0 +1,18 @@
+body {
+  font-family: "Open Sans";
+}
+
+.logo {
+  width: 132px;
+  height: 53px;
+}
+
+.navbar {
+  background-color: var(--pink-color);
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #707070;
+}
