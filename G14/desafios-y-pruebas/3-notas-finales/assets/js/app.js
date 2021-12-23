@@ -5,7 +5,7 @@ document.write(`
  <h1>Notas finales</h1>
   <p><strong>Nombre:</strong>  ${nombreCompleto}</p>
   <p><strong>Carrera:</strong> ${nombreCarrera}</p>
-
+  
   <table class="table">
     <thead class="thead-dark">
       <tr>

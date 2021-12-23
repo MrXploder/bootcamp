@@ -1,0 +1,19 @@
+.navbar-brand {
+  font-family: "Lobster";
+  font-size: 37px;
+}
+
+.carousel-indicators {
+  bottom: -75px;
+}
+
+.carousel-indicators li {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #373A3C31;
+}
+
+.carousel-indicators li.active {
+  background-color: #373A3C;
+}
