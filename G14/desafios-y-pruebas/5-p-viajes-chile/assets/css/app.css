@@ -1,0 +1,9 @@
+body {
+  background-color: black;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
