@@ -1,9 +1,71 @@
+:root {
+  --app-primary-color: #25caf0;
+  --app-background-color: black;
+  --app-font-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: black;
+  background-color: var(--app-background-color);
+  color: var(--app-font-color);
+  font-family: "Roboto";
 }
 
 .navbar {
   position: fixed;
   z-index: 1;
   width: 100%;
+}
+
+.icon-banner {
+  text-align: center;
+  background-color: var(--app-primary-color);
+  height: auto;
+}
+
+.title {
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title-underline {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.highlights-section .card-body {
+  background-color: var(--app-primary-color);
+}
+
+.highlights-section img {
+  aspect-ratio: 4/3;
+}
+
+.btn-primary {
+  background-color: var(--app-primary-color);
+  border-color: var(--app-primary-color);
+}
+
+.footer {
+  background-color: var(--app-primary-color);
+}
+
+.footer-logo-title {
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.footer-logos-section {
+  display: flex;
+  margin: auto
+}
+
+.footer-logos-wrapper {
+  height: min-content;
+  margin: auto;
 }
