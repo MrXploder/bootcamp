@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #c9c9c9;
+      }
+
+      .roja {
+        background-color: red;
+      }
+
+      .amarilla {
+        background-color: yellow;
+      }
+
+      .verde {
+        background-color: green;
+      }
+
+      .negro {
+        background-color: black;
+      }
+
+      .blanco {
+        background-color: white;
+      }
+
+      .bandera {
+        margin: 25px;
+        height: 200px;
+        width: 400px;
+        background-color: white;
+        border: 1px solid #343434;
+        position: relative;
+      }
+
+      .bandera.espana .barra.roja {
+        height: 25%;
+      }
+
+      .bandera.espana .barra.amarilla {
+        height: 50%;
+      }
+
+      .bandera.dinamarca .cuadrado {
+        width: 20%;
+        height: 45%;
+        position: absolute;
+      }
+
+      .bandera.dinamarca .rectangulo {
+        width: 70%;
+        height: 45%;
+        position: absolute;
+      }
+
+      .bandera.dinamarca .cuadrado.uno {
+        top: 0;
+        left: 0;
+      }
+
+      .bandera.dinamarca .cuadrado.dos {
+        bottom: 0;
+        left: 0;
+      }
+
+      .bandera.dinamarca .rectangulo.uno {
+        top: 0;
+        right: 0;
+      }
+
+      .bandera.dinamarca .rectangulo.dos {
+        bottom: 0;
+        right: 0;
+      }
+
+      .bandera.emiratosarabes .rectangulo.verde,
+      .bandera.emiratosarabes .rectangulo.negro,
+      .bandera.emiratosarabes .rectangulo.blanco {
+        height: calc(100% / 3);
+        width: 100%;
+      }
+
+      .bandera.emiratosarabes .rectangulo.roja {
+        height: 100%;
+        width: 20%;
+        position: absolute;
+      }
+
+      .bandera.japon .circulo {
+        height: 50%;
+        width: 25%;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bandera espana">
+      <div class="barra roja"></div>
+      <div class="barra amarilla"></div>
+      <div class="barra roja"></div>
+    </div>
+    <div class="bandera dinamarca">
+      <div class="cuadrado roja uno"></div>
+      <div class="cuadrado roja dos"></div>
+      <div class="rectangulo roja uno"></div>
+      <div class="rectangulo roja dos"></div>
+    </div>
+    <div class="bandera emiratosarabes">
+      <div class="rectangulo roja"></div>
+      <div class="rectangulo verde"></div>
+      <div class="rectangulo blanco"></div>
+      <div class="rectangulo negro"></div>
+    </div>
+    <div class="bandera japon">
+      <div class="circulo roja"></div>
+    </div>
+  </body>
+</html>
