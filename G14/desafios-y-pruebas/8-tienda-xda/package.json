@@ -1,0 +1,16 @@
+{
+  "name": "8-tienda-xda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch assets/scss/main.scss assets/css/app.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.1",
+    "node-sass": "^7.0.1"
+  }
+}

@@ -1,0 +1,158 @@
+body, html {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+}
+
+.contenedor {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menu {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.nav {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.input-menu {
+  border-radius: 30px;
+}
+
+.contenido {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "tags tags" "noticias noticias";
+  @media screen and (min-width: 500px) {
+    grid-template-areas: "noticias tags";
+  }
+}
+
+.noticias {
+  display: grid;
+  grid-template-columns: 250px;
+  grid-template-rows: auto;
+  grid-area: noticias;
+
+  @media screen and (min-width: 500px) {
+    grid-template-columns: repeat(2, 250px);
+  }
+
+  @media screen and (min-width: 798px){
+    grid-template-columns: repeat(3, 250px);
+  }
+}
+
+
+
+.noticia {
+  width: 210px;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.cuerpo img {
+  width: 210px;
+  height: 300px;
+}
+
+.cuerpo p {
+  padding: 5px 10px;
+}
+
+.tags {
+  grid-area: tags;
+}
+
+.cabecera-listado {
+  width: 220px;
+  border-bottom: 1px solid gray;
+}
+
+.tags {
+  border-bottom: 1px solid gray;
+}
+
+.tags ul {
+  padding: 0;
+  list-style: none;
+}
+
+.tags ul li {
+  padding: 2px 4px;
+  background-color: steelblue;
+  margin-right: 1px;
+  color: white;
+}
+
+.noticias-destacadas {
+  margin-bottom: 50px;
+}
+
+.noticias-destacadas img {
+  width: 220px;
+  height: 200px;
+}
+
+
+.newsletter {
+  width: 960px;
+  background-color: #f2f4f5;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.newsletter h2 {
+  font-size: 24px
+}
+
+.group input,
+.group button {
+  display: inline-block;
+  border-width: 0;
+  font-size: 13px;
+  padding: 5px 10px;
+
+}
+
+.group button {
+  background-color: coral;
+  color: white;
+}
+
+.footer {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}

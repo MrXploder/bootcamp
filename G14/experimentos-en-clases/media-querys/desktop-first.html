@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media (min-width: 321px) and (max-width: 700px) {
+        .circle-sm {
+          border-radius: 50%;
+          width: 200px;
+          height: 200px;
+          background-color: aqua;
+        }
+      }
+
+      @media screen and (max-width: 320px) {
+        .box-xs {
+          background-color: black;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-xs circle-sm"></div>
+  </body>
+</html>

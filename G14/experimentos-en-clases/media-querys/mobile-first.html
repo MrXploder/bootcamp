@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media screen and (min-width: 320px) {
+        /* reglas de css que yo quiera que se empezaran a regir desde los 700px */
+        .circle-md {
+          border-radius: 50%;
+        }
+      }
+
+      @media screen and (min-width: 700px) {
+        .triangle-lg {
+          width: 0;
+          height: 0;
+          border-right: 100px solid transparent;
+          border-top: 100px solid transparent;
+          border-left: 100px solid transparent;
+          border-bottom: 100px solid #f0ad4e;
+          border-radius: unset !important;
+        }
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box circle-md triangle-lg"></div>
+  </body>
+</html>

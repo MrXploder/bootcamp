@@ -1,0 +1,19 @@
+.navbar {
+  padding: 0;
+
+  &-brand-container {
+    padding: 14px;
+    background-color: black;
+  }
+
+  &-brand {
+    margin-right: 0;
+    color: white !important;
+    font-family: "Old TT";
+  }
+
+  &-nav {
+   @extend .ml-auto;
+   @extend .mr-4;
+  }
+}
