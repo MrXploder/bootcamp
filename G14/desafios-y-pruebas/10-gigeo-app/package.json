@@ -1,0 +1,16 @@
+{
+  "name": "10-gigeo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "sass --watch src/assets/scss/main.scss dist/assets/app.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mdi/font": "^6.5.95",
+    "bootstrap": "^4.6.1"
+  }
+}
