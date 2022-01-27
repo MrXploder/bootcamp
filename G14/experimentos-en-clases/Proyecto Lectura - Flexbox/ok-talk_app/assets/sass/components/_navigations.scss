@@ -1,0 +1,60 @@
+/* COMPONENTS: NAVIGATIONS
+   ========================================================================== */
+/* Base*/
+.navbar {
+  padding: 1em 0;
+}
+
+.user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.user-info__summary {
+  padding-left: .8em;
+
+  h2 {
+    margin: 0;
+    font-size: $medium;
+  }
+
+  p {
+    margin: 0;
+    font-size: $x-small;
+    color: $gray;
+  }
+}
+
+.navbar__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+
+  i {
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 1.2em;
+  }
+}
+
+/* Override vendors styles*/
+.fa-comment-alt:before {
+  padding-right: 1em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-toggler {
+  padding: 5px 0;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+}

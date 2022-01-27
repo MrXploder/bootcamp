@@ -1,0 +1,26 @@
+/* LAYOUT: MAIN
+   ========================================================================== */
+/* Base */
+.main {
+  padding-top: 12em;
+  border-right: 1px solid $platinum;
+}
+
+/* Message Dashboard */
+.message-dashboard {
+  text-align: center;
+
+  img {
+    max-width: 40%;
+    padding-bottom: 1em;
+  }
+
+  p {
+    padding-left: 5em;
+    padding-right: 5em;
+
+    span {
+      font-weight: $bold;
+    }
+  }
+}

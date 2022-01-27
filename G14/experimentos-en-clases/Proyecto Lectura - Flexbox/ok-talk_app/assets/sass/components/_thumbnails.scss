@@ -1,0 +1,16 @@
+/* COMPONENTS: THUMBNAILS
+   ========================================================================== */
+/* Base */
+.thumbnail {
+  border: 1px solid $gray;
+  border-radius: 50%;
+}
+
+/* Size */
+.thumbnail_tiny {
+  max-width: 50px;
+}
+
+.thumbnail_normal {
+  max-width: 80px;
+}

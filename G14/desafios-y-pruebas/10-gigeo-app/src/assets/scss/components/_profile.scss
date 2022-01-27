@@ -1,0 +1,23 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  .avatar {
+    border-radius: 50%;
+    max-width: 84px;
+    height: 84px;
+    object-fit: cover;
+    margin-right: 22px;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+
+  .subTitle {
+    font-size: 18px;
+    color: lightgray;
+  }
+}

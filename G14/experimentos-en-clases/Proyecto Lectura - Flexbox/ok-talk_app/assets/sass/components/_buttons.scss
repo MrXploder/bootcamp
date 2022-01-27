@@ -1,0 +1,25 @@
+/* COMPONENTS: BUTTONS
+   ========================================================================== */
+/* Base */
+.button {
+  padding: 1rem 4rem;
+  cursor: pointer;
+  font-family: $roboto;
+  font-size: $medium;
+  font-weight: $bold;
+}
+
+/* Button Scheme */
+.button_primary {
+  border: none;
+  color: $white;
+  background-color: $blue-bell;
+
+  &:hover {
+    background-color: $pale-lavander;
+  }
+
+  &:focus {
+    background-color: $gray;
+  }
+}

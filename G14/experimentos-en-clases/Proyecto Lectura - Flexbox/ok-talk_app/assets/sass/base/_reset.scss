@@ -1,0 +1,16 @@
+/* BASE:RESET
+   ========================================================================== */
+/* Override margin of document */
+* {
+  margin: 0;
+}
+
+/* Override negative margin of wrapper */
+body>div.wrapper.row {
+  margin: 0;
+}
+
+/* Set max width of all images to 100% */
+img {
+  max-width: 100%;
+}

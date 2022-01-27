@@ -1,0 +1,51 @@
+/* LAYOUT: SIDEBAR
+   ========================================================================== */
+/* Base */
+.sidebar {
+  border: 1px solid $platinum;
+}
+
+/* Header */
+.header {
+  border-bottom: 1px solid $platinum;
+}
+
+.contact-menu__content>h3 {
+  font-size: $medium;
+}
+
+/* Contact menu */
+.contact-menu__buttton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  padding: 2em;
+}
+
+/* Menu item*/
+.contact-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 2px solid $platinum;
+  padding: 1em;
+}
+
+.contact-menu__content {
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: $small;
+  }
+}
