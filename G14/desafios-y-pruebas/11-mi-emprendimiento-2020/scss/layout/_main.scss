@@ -1,0 +1,31 @@
+.web-dom {
+  width: 340px;
+}
+
+.blog {
+  border: 1px solid black;
+  padding: 8px;
+  .article {
+    border: 1px solid lightgrey;
+    padding: 4px;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
+    .blog,
+    .index {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+  }
+}

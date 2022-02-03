@@ -1,0 +1,51 @@
+.index {
+  text-align: center;
+  border: 1px solid black;
+  padding: 8px;
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  &__header-img {
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  &__banner {
+    background-color: #343434;
+    color: white;
+    font-weight: bold;
+  }
+
+  &__subjects {
+    list-style: circle;
+    text-align: left;
+  }
+
+  &__footer-img {
+    width: 340px;
+    margin: auto;
+    svg path {
+      &.cog {
+        transform-origin: 80% 80%;
+        animation-name: spin;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      &.code {
+        animation: wave 1s linear infinite alternate;
+      }
+    }
+  }
+}

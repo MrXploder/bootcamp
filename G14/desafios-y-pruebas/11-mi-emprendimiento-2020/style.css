@@ -7,6 +7,55 @@ body {
   height: 100vh;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes wave {
+  from {
+    transform: translateX(-30px);
+  }
+  to {
+    transform: translateX(30px);
+  }
+}
+.web-dom {
+  width: 340px;
+}
+
+.blog {
+  border: 1px solid black;
+  padding: 8px;
+}
+.blog .article {
+  border: 1px solid lightgrey;
+  padding: 4px;
+}
+.blog .article:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    flex-wrap: nowrap;
+  }
+  .main .blog,
+.main .index {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
 .nav {
   background-color: black;
   width: 100vw;
@@ -35,6 +84,64 @@ body {
 .nav__item a {
   text-decoration: none;
   color: white;
+}
+
+.article__img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+.article__title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.article__text {
+  font-size: 14px;
+}
+
+.index {
+  text-align: center;
+  border: 1px solid black;
+  padding: 8px;
+}
+.index__title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.index__text {
+  font-size: 14px;
+  text-align: left;
+}
+.index__header-img {
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-align: center;
+}
+.index__banner {
+  background-color: #343434;
+  color: white;
+  font-weight: bold;
+}
+.index__subjects {
+  list-style: circle;
+  text-align: left;
+}
+.index__footer-img {
+  width: 340px;
+  margin: auto;
+}
+.index__footer-img svg path.cog {
+  transform-origin: 80% 80%;
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.index__footer-img svg path.code {
+  animation: wave 1s linear infinite alternate;
 }
 
 /*# sourceMappingURL=style.css.map */
