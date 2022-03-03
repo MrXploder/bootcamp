@@ -18,11 +18,11 @@ for (var contador = 1; contador <= numeroFinal; contador++){
 
 // prohibido
 // por favor no seas malo conmigo
-while (true) {
-  console.log("jajaja")
-}
+// while (true) {
+//   console.log("jajaja")
+// }
 
 // prohibido
-do {
-  console.log("jajaja")
-} while (true);
+// do {
+//   console.log("jajaja")
+// } while (true);
