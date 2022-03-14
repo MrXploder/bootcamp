@@ -1,0 +1,17 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+
+
+.error-group .error-item {
+  visibility: hidden;
+  color: red;
+}
+
+.success-item {
+  visibility: hidden;
+  color: green;
+}

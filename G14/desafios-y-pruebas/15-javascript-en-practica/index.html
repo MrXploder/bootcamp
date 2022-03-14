@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript en practica</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <form action="">
+      <h3>Escríbenos !!!</h3>
+
+      <p class="success-item" id="mensaje-exito">Mensaje enviado con exito</p>
+
+      <div class="input-group">
+        <label for="nombre-completo">Nombre completo</label>
+        <input type="text" id="nombre-completo" />
+        <div class="error-group">
+          <p class="error-item">El nombre es requerido</p>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="asunto">Asunto</label>
+        <input type="text" id="asunto"/>
+        <div class="error-group">
+          <p class="error-item">El asunto es requerido</p>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea type="text" id="mensaje"></textarea>
+        <div class="error-group">
+          <p class="error-item">El mensaje es requerido</p>
+        </div>
+      </div>
+
+      <button type="button" id="botonSubmit">Enviar mensaje</button>
+    </form>
+
+
+    <!-- <form action="" id="formulario">
+      <input type="text">
+      <button type="submit"></button>
+    </form> -->
+
+    <script src="/app.js"></script>
+  </body>
+</html>
