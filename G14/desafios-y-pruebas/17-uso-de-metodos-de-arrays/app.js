@@ -148,21 +148,21 @@ radiologia.pop();
 /**
  * 3
  */
- document.write("<h1>Ejercicio 3</h1>")
+document.write("<h1>Ejercicio 3</h1>");
 dental.forEach(function (consulta) {
   document.write(
     `<p>${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision}</p>`
-  )
+  );
   // document.write(Object.values(consulta).join(" - "))
-  document.write("<br/>")
-})
+  document.write("<br/>");
+});
 
 /**
  * 4
  */
- document.write("<h1>Ejercicio 4</h1>")
+document.write("<h1>Ejercicio 4</h1>");
 // es5
-const todasLasConsultas = radiologia.concat(traumatologia).concat(dental)
+const todasLasConsultas = radiologia.concat(traumatologia).concat(dental);
 // es6
 // const todasLasConsultas = [...radiologia, ...traumatologia, ...dental]
 
@@ -176,30 +176,42 @@ const todasLasConsultas = radiologia.concat(traumatologia).concat(dental)
 
 //forma 2
 todasLasConsultas.forEach(function (consulta) {
-  document.write(`${consulta.paciente}<br/>`)
-})
-
+  document.write(`${consulta.paciente}<br/>`);
+});
 
 /**
  * 5
  */
-document.write("<h1>Ejercicio 5</h1>")
+document.write("<h1>Ejercicio 5</h1>");
 const pacientesConIsapreDeDental = dental.filter(function (consulta) {
-  return consulta.prevision === "ISAPRE"
-})
+  return consulta.prevision === "ISAPRE";
+});
 
 pacientesConIsapreDeDental.forEach(function (consulta) {
-  document.write(`${consulta.paciente} - ${consulta.prevision} <br/>`)
-})
+  document.write(`${consulta.paciente} - ${consulta.prevision} <br/>`);
+});
 
 /**
  * 6
  */
- document.write("<h1>Ejercicio 6</h1>")
-const pacientesConFonasaDeTraumatologia = traumatologia.filter(function (consulta) {
-  return consulta.prevision === "FONASA"
-})
+document.write("<h1>Ejercicio 6</h1>");
+const pacientesConFonasaDeTraumatologia = traumatologia.filter(function (
+  consulta
+) {
+  return consulta.prevision === "FONASA";
+});
 
 pacientesConFonasaDeTraumatologia.forEach(function (consulta) {
-  document.write(`${consulta.paciente} - ${consulta.prevision} <br/>`)
-})
+  document.write(`${consulta.paciente} - ${consulta.prevision} <br/>`);
+});
+
+/**
+ * Obs
+ */
+// traumatologia.forEach(function (consulta) {
+//   if (consulta.prevision === "FONASA") {
+//     document.write(`${consulta.paciente} - ${consulta.prevision} <br/>`);
+//   }
+// });
+
+
