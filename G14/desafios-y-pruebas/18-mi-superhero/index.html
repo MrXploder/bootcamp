@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Hero</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body class="text-center">
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="/img/sh2.jpg" width="30" height="30" alt="" />
+        SuperHero
+      </a>
+    </nav>
+
+    <main style="max-width: 90vw">
+      <img src="/img/sh1.jpg" alt="" class="text-center" />
+
+      <h1>Encuentra tu SuperHero</h1>
+      <div class="form-group">
+        <label for="superheroid">Ingresa el numero del supehero a buscar</label>
+        <input type="number" class="form-control" id="superheroid" value="1" />
+      </div>
+      <button type="button" class="btn btn-primary" id="buscar">Buscar</button>
+
+      <section id="superhero-details">
+        <h1>Superhero encontrado</h1>
+
+        <div class="row">
+          <div class="col-3">
+            <img src="" alt="">
+          </div>
+          <div class="col-9">
+            <ul class="list-group">
+              <li class="list-group-item name" id="superhero-name"></li>
+              <li class="list-group-item occupation" id="superhero-occupation"></li>
+              <li class="list-group-item appearance"></li>
+              <li class="list-group-item height"></li>
+              <li class="list-group-item weight"></li>
+              <li class="list-group-item alliance"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="superhero-stats"></section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>  
+    <script src="/app.js"></script>
+  </body>
+</html>
