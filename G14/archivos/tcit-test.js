@@ -46,7 +46,7 @@ const Banks = [
  * Arreglo con los ids de clientes
  */
 function listClientsIds() {
-  return clients.map((client) => client.id);
+  return Clients.map((client) => client.id);
 }
 
 /**
@@ -54,7 +54,11 @@ function listClientsIds() {
  * Arreglo con los ids de clientes ordenados por rut
  */
 function listClientsIdsSortByTaxNumber() {
-  //TODO
+  return Clients.sort((a, b) => {
+    if (a.taxNumber < b.taxNumber) return -1;
+    if (a.taxNumber > b.taxNumber) return 1;
+    return 0;
+  }).map((client) => client.id);
 }
 
 /**
@@ -116,7 +120,8 @@ function banksPoorClients() {
  * 8
  * Agregar nuevo cliente con datos ficticios a "clientes" y
  * agregar una cuenta en el BANCO ESTADO con un saldo de 9000 para este nuevo empleado.
- * Luego devolver el lugar que ocupa este cliente en el ranking de la pregunta 2.// No modificar arreglos originales para no alterar las respuestas anteriores al correr la solución
+ * Luego devolver el lugar que ocupa este cliente en el ranking de la pregunta 2.
+ * !No modificar arreglos originales para no alterar las respuestas anteriores al correr la solución
  */
 function newClientRanking() {
   //TODO
