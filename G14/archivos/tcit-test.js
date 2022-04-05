@@ -34,6 +34,10 @@ const Accounts = [
   { clientId: 2, bankId: 2, balance: 10000 },
 ];
 
+/**
+ * {6: {clientId: 6, balance: 0}}
+ */
+
 const Banks = [
   { id: 1, name: "SANTANDER" },
   { id: 2, name: "CHILE" },
@@ -67,7 +71,24 @@ function listClientsIdsSortByTaxNumber() {
  * por la suma TOTAL de los saldos de cada cliente en los bancos que participa.
  */
 function sortClientsTotalBalances() {
-  //TODO
+  return Object.values(
+    Accounts.reduce((accumulator, account) => {
+      if (accumulator[account.clientId]) {
+        accumulator[account.clientId].balance += account.balance;
+      } else {
+        accumulator[account.clientId] = account;
+      }
+
+      return accumulator;
+    }, {})
+  )
+    .map((account) => {
+      return {
+        balance: account.balance,
+        ...Clients.find((client) => client.id === account.clientId),
+      };
+    })
+    .sort((a, b) => a.balance - b.balance);
 }
 
 /**
@@ -77,7 +98,16 @@ function sortClientsTotalBalances() {
  * alfabeticamente por nombre.
  */
 function banksClientsTaxNumbers() {
-  //TODO
+  return Banks.reduce((accumulator, bank) => {
+    accumulator[bank.name] = [...Clients]
+      .sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      })
+      .map((client) => client.taxNumber);
+    return accumulator;
+  }, {});
 }
 
 /**
