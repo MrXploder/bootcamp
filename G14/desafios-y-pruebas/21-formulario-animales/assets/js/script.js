@@ -55,19 +55,20 @@ $(document).ready(() => {
   const $telefono = $("#telefono");
   const $direccion = $("#direccion");
   const $nombreMascota = $("#nombreMascota");
-  const $tipo = $("#tipo");
+  const $tipo = document.getElementById("tipo")
   const $enfermedad = $("#enfermedad");
 
   const $btnAgregar = $("#agregar");
   const $resultado = $("#resultado");
 
   $btnAgregar.click(($event) => {
+    console.log($tipo, Object.getPrototypeOf($tipo), $tipo.value)
     $event.preventDefault();
 
     const mascota = new Mascota(
       $nombreMascota.val(),
       $enfermedad.val(),
-      $tipo.val(),
+      $tipo.value,
       $propietario.val(),
       $direccion.val(),
       $telefono.val()

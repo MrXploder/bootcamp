@@ -116,7 +116,11 @@ function banksClientsTaxNumbers() {
  * que tengan más de 25.000 en el Banco SANTANDER
  */
 function richClientsBalances() {
-  //TODO
+  return Accounts.filter(
+    (account) => account.bankId === 1 && account.balance >= 25000
+  )
+    .map((account) => account.balance)
+    .sort((a, b) => a - b);
 }
 
 /**
