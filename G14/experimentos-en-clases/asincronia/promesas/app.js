@@ -39,6 +39,9 @@ APIUsuarios()
   .then(() => {
 
   })
-  .then
+
+
+  // mostrar los datos en pantalla
+
 
 

@@ -126,10 +126,28 @@ function richClientsBalances() {
 /**
  * 5
  * Arreglo con ids de bancos ordenados crecientemente por
- * la cantidad TOTAL de dineroque administran.
+ * la cantidad TOTAL de dinero que administran.
  */
 function banksRankingByTotalBalance() {
   //TODO
+  return Banks.map((bank) => {
+    return {
+      ...bank,
+      balance: Accounts.reduce((accumulator, account) => {
+        if (account.bankId === bank.id) {
+          accumulator += account.balance;
+        }
+
+        return accumulator;
+      }, 0),
+    };
+  })
+    .sort((a, b) => {
+      if (a.balance - b.balance > 0) return 1;
+      else if (a.balance - b.balance < 0) return -1;
+      else return 0;
+    })
+    .map((bank) => bank.id);
 }
 
 /**

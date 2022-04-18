@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/icon_51ddb4221b650d6ab1cf43f7c0e840a9.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Desafío 2</title>
+</head>
+<body>
+    <div class="mx-auto w-25 mt-5">
+        <img src="./assets/img/1 J8O2xd9ZqxWr2x6EP4MHmg.png" alt="github" class="img-fluid">
+    </div>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Busqueda de Usuarios en GitHub y sus Repositorios</h1>
+        <form>
+            <div class="form-group">
+              <label for="nombre">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="nombre" aria-describedby="nombreUser" placeholder="Nombre de Usuario">
+              <small id="nombreUser" class="form-text text-muted">Escriba el nombre del usuario de GitHub que desea buscar.</small>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="nombre">Número de Página</label>
+                    <input type="text" class="form-control" placeholder="Número de página" id="pagina">
+                </div>
+                <div class="col">
+                    <label for="nombre">Repositorios por Páginas</label>
+                    <input type="text" class="form-control" placeholder="Número de Rrepositorio por Página" id="repoPagina">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary mt-5 mx-auto d-block w-25" id="enviar">Enviar</button>
+          </form>
+    </div>
+    <hr>
+    <div class="container mt-3">
+        <h1 class="text-center">Resultados</h1>
+        <div id="resultados"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
