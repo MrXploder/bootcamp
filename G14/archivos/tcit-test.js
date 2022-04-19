@@ -8,6 +8,7 @@ const Clients = [
   { id: 5, taxNumber: "94020190", name: "VICTOR MANUEL ROJAS LUCAS" },
   { id: 6, taxNumber: "99804238", name: "MOHAMED FERRE SAMPER" },
 ];
+
 const Accounts = [
   { clientId: 6, bankId: 1, balance: 15000 },
   { clientId: 1, bankId: 3, balance: 18000 },
@@ -58,11 +59,13 @@ function listClientsIds() {
  * Arreglo con los ids de clientes ordenados por rut
  */
 function listClientsIdsSortByTaxNumber() {
-  return Clients.sort((a, b) => {
-    if (a.taxNumber < b.taxNumber) return -1;
-    if (a.taxNumber > b.taxNumber) return 1;
-    return 0;
-  }).map((client) => client.id);
+  return [...Clients]
+    .sort((a, b) => {
+      if (a.taxNumber < b.taxNumber) return -1;
+      if (a.taxNumber > b.taxNumber) return 1;
+      return 0;
+    })
+    .map((client) => client.id);
 }
 
 /**
@@ -129,7 +132,6 @@ function richClientsBalances() {
  * la cantidad TOTAL de dinero que administran.
  */
 function banksRankingByTotalBalance() {
-  //TODO
   return Banks.map((bank) => {
     return {
       ...bank,
@@ -156,7 +158,19 @@ function banksRankingByTotalBalance() {
  * los valores el número de clientes que solo tengan cuentas en ese banco.
  */
 function banksFidelity() {
-  //TODO
+  return Banks.reduce((bankAccumulator, bank) => {
+    bankAccumulator[bank.name] = Clients.reduce((clientAccumulator, client) => {
+      if (
+        Accounts.filter((account) => account.clientId === client.id).every(
+          (account) => account.bankId === bank.id
+        )
+      ) {
+        clientAccumulator += 1;
+      }
+      return clientAccumulator;
+    }, 0);
+    return bankAccumulator;
+  }, {});
 }
 
 /**
