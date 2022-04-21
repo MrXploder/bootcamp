@@ -30,12 +30,22 @@ body {
   background: #f0f0f0;
 }
 
+#Animales .card {
+  width: 150px;
+}
+
 #Animales div div {
   transition: all 200ms;
 }
 
 #Animales div >div:hover {
   box-shadow: 0px 1px 5px 1px;
+}
+
+#Animales img:first-child(1) {
+  object-position: top;
+  object-fit: cover;
+  height: 167px;
 }
 
 .participante {
@@ -46,5 +56,14 @@ body {
 
 .modal-dialog{
     max-width: 85% !important;
+}
+
+.modal-body img {
+  width: 100%;
+}
+
+.modal-body {
+  color: white;
+  text-align: center;
 }
 
