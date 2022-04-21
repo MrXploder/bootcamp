@@ -91,6 +91,9 @@ async function iniciarPrograma() {
       animalFiltrado.sonido,
     ];
 
+    /**
+     * Se podria haber hecho sin if ni switch-case?
+     */
     switch (animalSeleccionado) {
       case "Leon":
         zoologico.push(new Leon(...datosNuevoAnimal));
@@ -109,8 +112,15 @@ async function iniciarPrograma() {
         break;
     }
 
+    /**
+     * Funcion aparte para mostrar los datos en la vista sino tendriamos
+     * la ensalada
+     */
     renderZoo(zoologico);
 
+    /**
+     * Reiniciamos el formulario como guinda de la torta.
+     */
     $selectAnimal.value = "";
     $inputComentarios.value = "";
     $selectEdad.value = "";
@@ -122,23 +132,54 @@ async function iniciarPrograma() {
    * Esta funcion debe tomar un arreglo de animales y crearlos en la vista
    */
   function renderZoo(zoologico) {
+    /**
+     * Vaciamos todo el DIV de la vista, para empezar todo denuevo
+     */
     $zonaAnimales.innerHTML = "";
+
+    /**
+     * Vamos animal por animal agregandolo a la vista
+     */
     zoologico.forEach((animal) => {
+      /**
+       * Creamos etiquetas "virtuales"
+       * Es como cuando hacemos document.getElementById pero en realidad
+       * no existen... las creamos aqui mismo y luego las ponemos en la vista
+       */
       const $cardDiv = document.createElement("div");
       const $modalImg = document.createElement("img");
       const $soundButton = document.createElement("button");
 
+      /**
+       * Configuramos el div
+       * <div class="card">
+       */
       $cardDiv.classList.add("card");
 
+      /**
+       * Configuramos el img
+       * <img src="/assets/imgs/..." class="card-img-top"/>
+       */
       $modalImg.src = `/assets/imgs/${animal.img}`;
       $modalImg.classList.add("card-img-top");
 
-      $soundButton.classList.add("btn")
-      $soundButton.classList.add("btn-secondary")
+      /**
+       * Configuramos el button
+       * <button class="btn btn-secondary">
+       *    <img src="/assets/imgs/audio.svg" width="35" height="35">
+       * </button>
+       */
+      $soundButton.classList.add("btn");
+      $soundButton.classList.add("btn-secondary");
       $soundButton.innerHTML = `
         <img src="/assets/imgs/audio.svg" width="35" height="35">
-      `
+      `;
 
+      /**
+       * Ya tenemos el <img> pero ahora debemos escuchar cada vez que le hagan click
+       *
+       * Cuando le hacemos click, levantamos el modal con jQuery
+       */
       $modalImg.addEventListener("click", () => {
         $bodyModalAnimal.innerHTML = `
           <img src="/assets/imgs/${animal.img}" />
@@ -151,15 +192,31 @@ async function iniciarPrograma() {
         $("#modalAnimal").modal("show");
       });
 
+      /**
+       * Ya tenemos el "<button>" asi que ahora debemos escuchar cada vez que le hagamos click
+       *
+       * Cuando le hacemos click, reproducimos el sonido
+       */
       $soundButton.addEventListener("click", () => {
-        $audioPlayer.setAttribute("src", `/assets/sounds/${animal.sonido}`)
-        $audioPlayer.load()
-        $audioPlayer.play()
+        $audioPlayer.setAttribute("src", `/assets/sounds/${animal.sonido}`);
+        $audioPlayer.load();
+        $audioPlayer.play();
       });
 
+      /**
+       * Tomamos el DIV y le agregamos el IMG
+       */
       $cardDiv.appendChild($modalImg);
+      /**
+       * Tomamos el DIV y le agregamos el BUTTON
+       */
       $cardDiv.appendChild($soundButton);
 
+      /**
+       * Tomamos el DIV de la zona de animales y
+       * le agregamos el DIV que contiene la tarjeta
+       * del nuevo animal que acabamos de crear
+       */
       $zonaAnimales.appendChild($cardDiv);
     });
   }
