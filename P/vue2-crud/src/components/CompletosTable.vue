@@ -1,5 +1,9 @@
 <template>
-  <v-data-table :headers="headers" :items="completos"></v-data-table>
+  <v-data-table :headers="headers" :items="completosList" :loading="loading">
+    <template #loading>
+      <v-skeleton-loader type="table-row-divider@2"></v-skeleton-loader>
+    </template>
+  </v-data-table>
 </template>
 
 <script>
@@ -20,10 +24,11 @@ export default {
   }),
   computed: {
     ...mapState('completos', {
-      completos: (state) => state.list
+      completosList: (state) => state.list,
+      completosState: (state) => state.state
     }),
-    items() {
-      return [{ id: 1, name: 'Italiano' }];
+    loading() {
+      return this.completosState === 'pending';
     }
   },
   methods: {
