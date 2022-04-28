@@ -20,11 +20,6 @@ export default {
       this.clicks--;
     },
   },
-  // data: function(){
-  //   return {
-
-  //   }
-  // },
 };
 </script>
 
