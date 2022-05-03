@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex; align-items: center; gap: 1rem">
+  <div class="avatar" style="display: flex; align-items: center; gap: 1rem">
     <img
       :src="imagen"
       alt=""
@@ -15,4 +15,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.avatar {
+  & img{
+
+  }
+
+  & p {
+    
+  }
+}
+</style>
