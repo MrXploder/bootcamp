@@ -29,7 +29,10 @@
               v-for="(tarea, $index) of tareas"
               :key="$index"
             >
-              {{ $index + 1 }}: {{ tarea }}
+              {{ $index + 1 }}: {{ tarea }} -
+              <button class="btn btn-danger" @click="eliminarTarea($index)">
+                Eliminar
+              </button>
             </li>
           </ul>
         </div>
@@ -49,6 +52,9 @@ export default {
     agregarNuevaTarea() {
       this.tareas.unshift(this.nuevaTarea);
       this.nuevaTarea = "";
+    },
+    eliminarTarea(indiceTarea) {
+      this.tareas.splice(indiceTarea, 1);
     },
   },
 };
