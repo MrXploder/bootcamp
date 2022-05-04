@@ -3,13 +3,23 @@
     <template #loading>
       <v-skeleton-loader type="table-row-divider@2"></v-skeleton-loader>
     </template>
+    <template v-slot:[`item.details`]="{ item }">
+      <v-btn :to="{ name: 'hotdogDetails', params: { id: item.id } }">
+        <v-icon>mdi-eye</v-icon>
+      </v-btn>
+      <RemoveHotdogModalBtn :hotdog="item" />
+      <UpdateHotdogModalBtn :hotdog="item" />
+    </template>
   </v-data-table>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import RemoveHotdogModalBtn from '@/components/RemoveHotdogModalBtn.vue';
+import UpdateHotdogModalBtn from '@/components/UpdateHotdogModalBtn.vue';
 
 export default {
+  components: { RemoveHotdogModalBtn, UpdateHotdogModalBtn },
   data: () => ({
     headers: [
       {
@@ -19,6 +29,10 @@ export default {
       {
         value: 'name',
         text: 'Nombre'
+      },
+      {
+        value: 'details',
+        text: 'Detalle'
       }
     ]
   }),
@@ -32,10 +46,12 @@ export default {
     }
   },
   methods: {
-    ...mapActions('completos', ['getAllCompletos'])
+    ...mapActions('completos', {
+      getAllHotdogs: 'getAll'
+    })
   },
   mounted() {
-    this.getAllCompletos();
+    this.getAllHotdogs();
   }
 };
 </script>

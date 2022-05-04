@@ -12,9 +12,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/completos',
-    name: 'completos',
-    component: () => import('@/views/Completos.vue')
+    path: '/hotdogs',
+    name: 'hotdogs',
+    component: () => import('@/views/Hotdogs.vue')
+  },
+  {
+    path: '/hotdogs/:id',
+    name: 'hotdogDetails',
+    component: () => import('@/views/HotdogDetails.vue')
   }
 ];
 
