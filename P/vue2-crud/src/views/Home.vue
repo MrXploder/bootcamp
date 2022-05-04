@@ -1,9 +1,15 @@
 <template>
-  <h1>Bienvenidos al home</h1>
+  <HotdogsCarousel />
 </template>
 
 <script>
-export default {};
+import HotdogsCarousel from '@/components/HotdogsCarousel.vue';
+export default {
+  components: {
+    HotdogsCarousel
+  },
+  data: () => ({})
+};
 </script>
 
 <style></style>

@@ -2,7 +2,7 @@
   <v-app>
     <AppBar />
     <v-main>
-      <v-container>
+      <v-container class="pa-0">
         <router-view />
       </v-container>
     </v-main>
