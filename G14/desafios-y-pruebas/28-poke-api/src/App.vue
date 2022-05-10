@@ -6,21 +6,33 @@
 
     <section class="search">
       <h4>PokeGuía</h4>
-      <div class="input-search">
+      <form class="input-search" @submit.prevent="findPokemon(pokemonName)">
         <p>Nombre:</p>
-        <input type="text" />
-        <button>Buscar</button>
-      </div>
+        <input type="text" v-model="pokemonName" required />
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+
+    <section>
+      <img :src="pokemonFrontDefault" alt="" />
     </section>
 
     <section class="movements">
       <h4>Movimientos</h4>
-      <ul></ul>
+      <ul>
+        <li v-for="(move, $index) in pokemonMoves" :key="$index">
+          {{ move }}
+        </li>
+      </ul>
     </section>
 
-    <section class="habilities">
+    <section class="abilities">
       <h4>Habilidades</h4>
-      <ul></ul>
+      <ul>
+        <li v-for="(ability, $index) in pokemonAbilities" :key="$index">
+          {{ ability }}
+        </li>
+      </ul>
     </section>
   </main>
 </template>
@@ -28,6 +40,33 @@
 <script>
 export default {
   name: "App",
+  data: () => ({
+    pokemon: null,
+    pokemonName: "",
+  }),
+  mounted() {
+    this.findPokemon("pikachu")
+  },
+  computed: {
+    pokemonMoves() {
+      return this.pokemon?.moves?.map?.((move) => move.move.name) ?? []
+    },
+    pokemonAbilities() {
+      return this.pokemon?.abilities?.map?.((ability) => ability.ability.name) ?? []
+    },
+    pokemonFrontDefault() {
+      return this.pokemon?.sprites?.front_default ?? ""
+    },
+  },
+  methods: {
+    async findPokemon(pokemonName) {
+      const pokemon = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+      ).then((response) => response.json())
+
+      this.pokemon = pokemon
+    },
+  },
 }
 </script>
 
