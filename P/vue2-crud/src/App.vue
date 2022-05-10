@@ -1,20 +1,32 @@
 <template>
   <v-app>
+    <SystemBar v-if="false" />
     <AppBar />
+    <NavigationDrawer />
+
     <v-main>
       <v-container class="pa-0">
-        <router-view />
+        <transition name="fade">
+          <router-view />
+        </transition>
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import AppBarComponent from '@/components/AppBar.vue';
+import SystemBar from '@/components/layout/SystemBar.vue'
+import AppBar from '@/components/layout/AppBar.vue'
+import NavigationDrawer from '@/components/layout/NavigationDrawer.vue'
+
 export default {
   components: {
-    AppBar: AppBarComponent
+    SystemBar,
+    AppBar,
+    NavigationDrawer
   },
-  data: () => ({})
-};
+  mounted() {
+    this.$vuetify.theme.dark = true
+  }
+}
 </script>

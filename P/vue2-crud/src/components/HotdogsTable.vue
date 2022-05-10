@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
-import RemoveHotdogModalBtn from '@/components/RemoveHotdogModalBtn.vue';
-import UpdateHotdogModalBtn from '@/components/UpdateHotdogModalBtn.vue';
+import { mapActions, mapState } from 'vuex'
+import RemoveHotdogModalBtn from '@/components/RemoveHotdogModalBtn.vue'
+import UpdateHotdogModalBtn from '@/components/UpdateHotdogModalBtn.vue'
 
 export default {
   components: { RemoveHotdogModalBtn, UpdateHotdogModalBtn },
@@ -42,7 +42,7 @@ export default {
       completosState: (state) => state.state
     }),
     loading() {
-      return this.completosState === 'pending';
+      return this.completosState === 'pending'
     }
   },
   methods: {
@@ -51,9 +51,9 @@ export default {
     })
   },
   mounted() {
-    this.getAllHotdogs();
+    this.getAllHotdogs()
   }
-};
+}
 </script>
 
 <style></style>

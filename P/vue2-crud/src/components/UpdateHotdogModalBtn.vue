@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from 'vuex'
 export default {
   props: {
     hotdog: { type: Object, required: true }
@@ -41,7 +41,7 @@ export default {
     hotdog: {
       immediate: true,
       handler(value) {
-        this.newHotdogName = value.name;
+        this.newHotdogName = value.name
       }
     }
   },
@@ -52,20 +52,20 @@ export default {
     }),
     async handleSubmit() {
       if (this.$refs.editHotdogForm.validate()) {
-        this.loading = true;
+        this.loading = true
         try {
-          await this.updateHotdog({ ...this.hotdog, name: this.newHotdogName });
-          await this.getAllHotdogs();
-          this.dialog = false;
+          await this.updateHotdog({ ...this.hotdog, name: this.newHotdogName })
+          await this.getAllHotdogs()
+          this.dialog = false
         } catch (e) {
-          console.error(e);
+          console.error(e)
         } finally {
-          this.loading = false;
+          this.loading = false
         }
       }
     }
   }
-};
+}
 </script>
 
 <style></style>

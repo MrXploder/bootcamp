@@ -1,12 +1,14 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
-import { completosModule } from './modules/completos';
+import { appModule } from './modules/app'
+import { completosModule } from './modules/completos'
 
 export default new Vuex.Store({
   modules: {
+    app: appModule,
     completos: completosModule
   }
-});
+})

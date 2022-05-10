@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from 'vuex'
 
 export default {
   data: () => ({
@@ -42,24 +42,24 @@ export default {
       getAllHotdogs: 'getAll'
     }),
     required(v) {
-      return !!v || 'Este campo es obligatorio';
+      return !!v || 'Este campo es obligatorio'
     },
     async handleFormSubmit() {
       if (this.$refs.newHotdogForm.validate()) {
-        this.loading = true;
+        this.loading = true
         try {
-          await this.createHotdog(this.newHotdogName);
-          await this.getAllHotdogs();
-          this.dialog = false;
+          await this.createHotdog(this.newHotdogName)
+          await this.getAllHotdogs()
+          this.dialog = false
         } catch (e) {
-          console.log(e);
+          console.log(e)
         } finally {
-          this.loading = false;
+          this.loading = false
         }
       }
     }
   }
-};
+}
 </script>
 
 <style></style>

@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import CreateHotdogModalBtn from '@/components/CreateHotdogModalBtn.vue';
-import HotdogsTable from '@/components/HotdogsTable.vue';
+import CreateHotdogModalBtn from '@/components/CreateHotdogModalBtn.vue'
+import HotdogsTable from '@/components/HotdogsTable.vue'
 
 export default {
   components: {
@@ -16,7 +16,7 @@ export default {
     HotdogsTable
   },
   data: () => ({})
-};
+}
 </script>
 
 <style></style>
