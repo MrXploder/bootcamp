@@ -2,15 +2,15 @@
   <v-navigation-drawer app @input="setDrawer($event)" :value="drawer" clipped>
     <v-list-item>
       <v-list-item-content>
-        <v-list-item-title class="text-h6"> Application </v-list-item-title>
-        <v-list-item-subtitle> subtext </v-list-item-subtitle>
+        <v-list-item-title class="text-h6"> Hotdogs </v-list-item-title>
+        <v-list-item-subtitle></v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
     <v-divider></v-divider>
 
     <v-list dense nav>
-      <v-list-item v-for="item in items" :key="item.title" link>
+      <v-list-item v-for="item in items" :key="item.title" link :to="item.to">
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-icon>
@@ -24,20 +24,34 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+import { mapState, mapMutations, mapGetters } from 'vuex'
+
 export default {
-  data: () => ({
-    items: [
-      {
-        icon: 'mdi-home',
-        title: 'Home'
-      }
-    ]
-  }),
+  data: () => ({}),
   computed: {
     ...mapState('app', {
       drawer: (state) => state.navigationDrawer
-    })
+    }),
+    ...mapGetters('session', {
+      userIsAdmin: 'isAdmin'
+    }),
+    items() {
+      const items = [
+        {
+          icon: 'mdi-food-hot-dog',
+          title: 'Nuestros productos',
+          to: '/'
+        }
+      ]
+      if (this.userIsAdmin) {
+        items.push({
+          icon: 'mdi-shield-crown',
+          title: 'Administrar',
+          to: '/hotdogs'
+        })
+      }
+      return items
+    }
   },
   methods: {
     ...mapMutations({

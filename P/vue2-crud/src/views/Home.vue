@@ -1,5 +1,8 @@
 <template>
-  <HotdogsCarousel />
+  <div>
+    <h1>Nuestros productos</h1>
+    <HotdogsCarousel />
+  </div>
 </template>
 
 <script>
@@ -8,7 +11,16 @@ export default {
   components: {
     HotdogsCarousel
   },
-  data: () => ({})
+  data: () => ({}),
+  mounted() {
+    console.log('mounted')
+  },
+  activated() {
+    console.log('activated')
+  },
+  deactivated() {
+    console.log('deactivated')
+  }
 }
 </script>
 

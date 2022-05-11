@@ -13,6 +13,10 @@ export default new Vuetify({
       light: {
         primary: '#fc9e40',
         secondary: '#409efc'
+      },
+      dark: {
+        primary: '#fc9e40',
+        secondary: '#409efc'
       }
     }
   },

@@ -5,8 +5,8 @@
     <NavigationDrawer />
 
     <v-main>
-      <v-container class="pa-0">
-        <transition name="fade">
+      <v-container>
+        <transition name="fade" mode="out-in">
           <router-view />
         </transition>
       </v-container>

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import { beforeEach } from './hooks/beforeEach'
 
 import Home from '@/views/Home.vue'
 
@@ -9,17 +10,26 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    meta: {
+      accessLevel: 'user'
+    }
   },
   {
     path: '/hotdogs',
     name: 'hotdogs',
-    component: () => import('@/views/Hotdogs.vue')
+    component: () => import('@/views/Hotdogs.vue'),
+    meta: {
+      accessLevel: 'admin'
+    }
   },
   {
     path: '/hotdogs/:id',
     name: 'hotdogDetails',
-    component: () => import('@/views/HotdogDetails.vue')
+    component: () => import('@/views/HotdogDetails.vue'),
+    meta: {
+      accessLevel: 'admin'
+    }
   }
 ]
 
@@ -28,5 +38,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+router.beforeEach(beforeEach)
 
 export default router

@@ -12,19 +12,35 @@
     </div>
 
     <v-app-bar-nav-icon @click="toggleDrawer()"></v-app-bar-nav-icon>
-    <v-btn icon>
-      <v-icon> </v-icon>
-    </v-btn>
+
+    <v-spacer></v-spacer>
+
+    <transition mode="out-in" name="fade">
+      <template v-if="userData">
+        <SignOutDialog />
+      </template>
+      <template v-else>
+        <SignInDialog />
+      </template>
+    </transition>
   </v-app-bar>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
+import SignInDialog from '@/components/Sign/SignInDialog.vue'
+import SignOutDialog from '@/components/Sign/SignOutDialog.vue'
 
 export default {
+  components: { SignInDialog, SignOutDialog },
   methods: {
     ...mapActions({
       toggleDrawer: 'app/toggleNavigationDrawer'
+    })
+  },
+  computed: {
+    ...mapState('session', {
+      userData: (state) => state.user
     })
   }
 }

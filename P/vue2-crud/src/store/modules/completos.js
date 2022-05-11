@@ -29,7 +29,6 @@ export const completosModule = {
   },
   actions: {
     async getAll({ commit }) {
-      // return getDocs(collection(db, 'completos')).then((docs) => docs.map((doc) => doc.data()));
       commit('SET_STATE', 'pending')
       try {
         const completosCollection = collection(db, 'completos')
