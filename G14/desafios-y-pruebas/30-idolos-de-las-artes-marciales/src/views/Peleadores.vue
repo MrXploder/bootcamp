@@ -3,7 +3,7 @@
     <h1>Listado de peleadores</h1>
     <ul>
       <li v-for="peleador in peleadores" :key="peleador.id">
-        {{ peleador.nombre }}
+        <router-link :to="`/peleadores/${peleador.id}`">{{peleador.nombre}}</router-link>
       </li>
     </ul>
   </div>
