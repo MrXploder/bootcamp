@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div style="margin-top: 48px">
     <div v-if="peleador">
+      <button @click="$emit('agregar')">Agregar al carrito</button>
       <h2>Nombre: {{ peleador.nombre }}</h2>
       <h4>Id: {{ $route.params.id }}</h4>
       <img :src="peleador.imgSrc" alt="" width="100px" height="100px" />
