@@ -18,7 +18,7 @@
       </v-dialog>
     </template>
 
-    <!-- 
+    <!--
     <template #item.name="{item}">
       {{ item.name.toUpperCase() }}
     </template>
