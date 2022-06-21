@@ -38,6 +38,27 @@ export const sessionModule = {
         commit('SET_LOADING', false);
       }
     },
+    async createUserWithEmailAndPassword({ commit }, newUser) {
+      commit('SET_LOADING', true);
+
+      try {
+        await Firebase.auth().createUserWithEmailAndPassword(
+          newUser.email,
+          newUser.password
+        );
+        await Firebase.firestore().collection('users').doc(newUser.email).set({
+          name: '',
+          lastName: '',
+          birthDate: '',
+          phoneNumber: '',
+          role: 'user',
+        });
+      } catch (error) {
+        console.error(error);
+      } finally {
+        commit('SET_LOADING', false);
+      }
+    },
     async signOut({ commit }) {
       commit('SET_LOADING', true);
       try {
@@ -45,7 +66,7 @@ export const sessionModule = {
       } catch (e) {
         console.error('otra embarraita mas, me perd0n as¿', e);
       } finally {
-        commit('SET_LOADING', falsez);
+        commit('SET_LOADING', false);
       }
     },
   },

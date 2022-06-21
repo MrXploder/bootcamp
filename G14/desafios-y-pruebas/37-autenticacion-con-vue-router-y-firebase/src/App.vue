@@ -27,6 +27,7 @@
 
       <SignInBtn v-if="!activeLogin" />
       <SignOutBtn v-if="activeLogin" />
+      <SignUpBtn v-if="!activeLogin" />
 
       <v-spacer></v-spacer>
 
@@ -44,10 +45,13 @@
 <script>
 import SignInBtn from '@/components/SignInBtn.vue';
 import SignOutBtn from '@/components/SignOutBtn.vue';
+import SignUpBtn from "@/components/SignUpBtn.vue";
+ 
 import { mapGetters } from 'vuex';
+
 export default {
   name: 'App',
-  components: { SignInBtn, SignOutBtn },
+  components: { SignInBtn, SignOutBtn, SignUpBtn },
   data: () => ({}),
   computed: {
     ...mapGetters('session', ['activeLogin']),

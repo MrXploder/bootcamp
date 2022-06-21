@@ -1,37 +1,35 @@
 <template>
   <div>
     <h1>Usuarios</h1>
-    <!-- <v-data-table :headers="headers" :items="users" :loading="loading">
+    <v-data-table :headers="headers" :items="users" :loading="loading">
       <template v-slot:[`item.details`]="{ item }">
         <v-btn icon color="error" @click="removeUser(item.id)">
           <v-icon>mdi-delete</v-icon>
         </v-btn>
 
-        <v-dialog width="500">
-          <template v-slot:activator="{ on }">
-            <v-btn icon color="info" v-on="on">
-              <v-icon>mdi-eye</v-icon>
-            </v-btn>
-          </template>
-
-          <v-card>
-            <v-card-title>Hola mundo</v-card-title>
-          </v-card>
-        </v-dialog>
+        <EditUserBtn :value="item" />
       </template>
-    </v-data-table> -->
+    </v-data-table>
   </div>
 </template>
 
 <script>
+import EditUserBtn from "@/components/EditUserBtn.vue";
+
 import { mapState, mapActions } from 'vuex';
 export default {
+  components: {EditUserBtn},
+  created() {
+    this.getAllUsers();
+  },
   data: () => ({
     headers: [
       { text: '#', value: 'id' },
       { text: 'Nombre', value: 'name' },
       { text: 'Apellido', value: 'lastName' },
-      { text: 'Detalle', value: 'details' },
+      { text: 'Edad', value: 'birthDate' },
+      { text: 'Numero Telefono', value: 'phoneNumber' },
+      { text: '', value: 'details' },
     ],
   }),
   computed: {
