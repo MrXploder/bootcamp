@@ -1,11 +1,10 @@
 import { initializeApp } from 'firebase/app'
 
 export const app = initializeApp({
-  apiKey: 'AIzaSyBxtU0jL4q1iCSo0KM_DS9W_zfSuJUoc5Q',
-  authDomain: 'vue2-crud-completos.firebaseapp.com',
-  projectId: 'vue2-crud-completos',
-  storageBucket: 'vue2-crud-completos.appspot.com',
-  messagingSenderId: '327928146814',
-  appId: '1:327928146814:web:032e26b6fdd09c4d23e12f',
-  measurementId: 'G-YDJ8CD7F58'
+  apiKey: 'AIzaSyAW0Sk5XvLOKNRRWXNa2ucTngJnWmQR3qU',
+  authDomain: 'test-1-2585f.firebaseapp.com',
+  projectId: 'test-1-2585f',
+  storageBucket: 'test-1-2585f.appspot.com',
+  messagingSenderId: '473311461371',
+  appId: '1:473311461371:web:380adeed4661c17fbd555e'
 })
