@@ -1,0 +1,60 @@
+header {
+  margin-bottom: 12px;
+}
+
+main {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.bg-main {
+  background-image: url("/assets/img/banner.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  height: 200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.bg-main h1 {
+  margin-top: 68px;
+  color: wheat;
+}
+
+.bg-main p {
+  color: white;
+}
+
+h1, p {
+  margin: 0;
+}
+
+.product {
+  margin-bottom: 12px;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+.product .info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  background-color: brown;
+  text-align: center;
+}
+
+.footer p {
+  color: white;
+  padding-top: 10px;
+}
