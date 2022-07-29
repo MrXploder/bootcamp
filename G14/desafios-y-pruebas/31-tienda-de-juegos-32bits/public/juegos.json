@@ -1,0 +1,50 @@
+[
+  {
+    "codigo": "0001",
+    "nombre": "Sekiro",
+    "stock": "43",
+    "precio": "30000",
+    "color": "red",
+    "cover": "https://as01.epimg.net/meristation/imagenes/2019/10/08/cover/993478151570529267.jpg"
+  },
+  {
+    "codigo": "0002",
+    "nombre": "Fifa 21",
+    "stock": "55",
+    "precio": "25000",
+    "color": "blue",
+    "cover": "https://sm.ign.com/ign_in/screenshot/default/ediffc5xkacogex_czd1.jpg"
+  },
+  {
+    "codigo": "0003",
+    "nombre": "Gears of War 4",
+    "stock": "12",
+    "precio": "15000",
+    "color": "green",
+    "cover": "https://store-images.s-microsoft.com/image/apps.27107.13510798887356280.e9581154-ba55-457f-9b5f-4285b6036ba9.852cd1b9-b6db-430f-a640-b02d32c72c05?w=300&h=300"
+  },
+  {
+    "codigo": "0004",
+    "nombre": "Mario Tennis Aces",
+    "stock": "56",
+    "precio": "35000",
+    "color": "black",
+    "cover": "https://i.3djuegos.com/juegos/15485/mario_tennis_aces/fotos/ficha/mario_tennis_aces-4559673.webp"
+  },
+  {
+    "codigo": "0005",
+    "nombre": "Bloodborne",
+    "stock": "12",
+    "precio": "10000",
+    "color": "blue",
+    "cover": "https://www.tomosygrapas.com/wp-content/uploads/2018/02/Bloodborne-1-Cover-B.jpg"
+  },
+  {
+    "codigo": "0006",
+    "nombre": "Forza Horizon 4",
+    "stock": "4",
+    "precio": "20000",
+    "color": "red",
+    "cover": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/08/forza-horizon-4-cover.jpg?itok=CiqSe3ev"
+  }
+]

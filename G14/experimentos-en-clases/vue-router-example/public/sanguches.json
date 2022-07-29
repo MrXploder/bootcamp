@@ -1,0 +1,52 @@
+[
+  {
+    "description": "Generally served hot, and often eaten with ketchup or brown sauce",
+    "origin": "United Kingdom",
+    "name": "Bacon"
+  },
+  {
+    "description": "A breakfast sandwich, usually fried or scrambled eggs",
+    "origin": null,
+    "name": "Bacon, egg and cheese"
+  },
+  {
+    "description": "Canned baked beans on white or brown bread. Sometimes butter is also used.",
+    "origin": "United States",
+    "name": "Baked bean"
+  },
+  {
+    "description": "Filling is typically meat, but can contain a wide range of foods, including sardines, tofu, pâté, or eggs. Served on an airy baguette with pickled carrots, cilantro and peppers.",
+    "origin": "Vietnam",
+    "name": "Bánh mì"
+  },
+  {
+    "description": "Served on a bun, with chopped or sliced meat (pulled pork, beef or chicken typically), and sometimes topped with coleslaw",
+    "origin": "United States",
+    "name": "Barbecue"
+  },
+  {
+    "description": "Ham and cheese, usually mantecoso, which is similar to farmer cheese",
+    "origin": "Chile",
+    "name": "Barros Jarpa"
+  },
+  {
+    "description": "Beef (usually thin cut steak) and cheese",
+    "origin": "Chile",
+    "name": "Barros Luco"
+  },
+  {
+    "description": "Melted cheese, roast beef, tomato and pickled cucumber in a hollowed-out French roll",
+    "origin": "Brazil",
+    "name": "Bauru"
+  },
+  {
+    "description": "Roast beef on a caraway kaiser roll",
+    "origin": "United States",
+    "name": "Beef on weck"
+  },
+  {
+    "description": "Named for its ingredients: bacon, lettuce and tomato",
+    "origin": "United States",
+    "name": "BLT"
+  }
+]

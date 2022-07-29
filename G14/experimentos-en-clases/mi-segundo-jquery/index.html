@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        const Boton = $("#boton");
+
+        Boton.on("click", function () {
+          console.log("click");
+          $("#boton").fadeOut();
+        });
+
+        Boton.dblclick(function () {
+          console.log("dbclick");
+        });
+
+        Boton.on("click", () => {
+        })
+      });
+
+      // declarar
+      function saludar(nombre) {
+        alert("hola " + nombre + " ¿como estas?");
+      }
+
+      // invocar
+      saludar("Ariel");
+
+      // funcion misma
+      saludar;
+
+      // alias
+      const decirHola = saludar;
+
+      // invocando el alias
+      decirHola("Pepito");
+
+      console.log(saludar);
+      console.log(decirHola);
+
+      /////////////////////////
+
+      // funcion anonima
+      const despedirse = function () {
+        console.log("Adios");
+      };
+
+      despedirse();
+
+      //////////////////////////
+
+      // fat arrow function
+      const decirChao = () => {
+        console.log("Chao")
+      }
+
+
+      //////////////////////////
+
+      const numeros = [1, 2, 3, 4, 5];
+      // const doble = numeros.map(function(numero){
+      //   return numero * 2
+      // }) // [2, 4, 6, 8, 10]
+
+      // const doble = numeros.map((numero) => {
+      //   return numero * 2
+      // })
+
+      // const doble = numeros.map((numero) => numero * 2)
+      const doble = numeros.map(numero => numero * 2);
+    </script>
+  </head>
+  <body>
+    <button class="btn btn-primary" id="boton">Clickme!</button>
+
+    <!-- <script>
+      const Boton = document.getElementById("boton");
+      Boton.addEventListener("click", function () {
+        Boton.style.opacity = 1;
+
+        const fade = function () {
+          setTimeout(function () {
+            if (Boton.style.opacity > 0) {
+              Boton.style.opacity -= 0.1;
+              fade();
+            }
+          }, 500);
+        };
+
+        fade();
+      });
+
+      Boton.addEventListener("dblclick", function () {
+        // otro algo
+      });
+    </script> -->
+  </body>
+</html>
