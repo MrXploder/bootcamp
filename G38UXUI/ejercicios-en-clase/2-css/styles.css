@@ -1,0 +1,47 @@
+/* Selector por clase */
+.titulo { 
+  color: red;
+}
+
+.parrafo {
+  font-size: 0.5rem;
+  color: #343434;
+  font-weight: 500;
+}
+
+/* Selector por ID */
+#curriculum {
+  background-color: azure;
+}
+
+/* Selector por etiqueta */
+h6 {
+  color: green;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-size: 2px;
+}
+
+.principal {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.avatar {
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.boton {
+  background-color: red;
+  border-radius: 4px;
+  width: 100vw;
+  height: 10vh;
+
+}
+
+
+

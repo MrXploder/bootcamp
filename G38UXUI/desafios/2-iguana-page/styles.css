@@ -1,0 +1,23 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.titulo-nav {
+  font-size: 50px;
+  text-align: center;
+}
+
+.bg-header {
+  width: 100%;
+}
+
+.texto-izquiera {
+  display: inline-block;
+  width: 50%;
+}
+
+.foto-derecha {
+  display: inline-block;
+}
