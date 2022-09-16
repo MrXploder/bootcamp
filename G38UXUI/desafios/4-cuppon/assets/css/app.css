@@ -1,0 +1,55 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  background-color: #28A745;
+}
+
+.navbar-brand img {
+  width: 86px;
+}
+
+.card {
+  max-width: 278px;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #212529;
+}
+
+.card-subtitle {
+  font-size: 16px;
+  color: #707070;
+}
+
+.card-text {
+  font-size: 13px;
+  color: #707070;
+}
+
+.precio {
+  font-size: 16px;
+  color: #707070;
+  text-align: right;
+}
+
+.precio-oferta {
+  font-size: 20px;
+  color: #28A745;
+}
+
+.formulario {
+  background-color: #28A745;
+}
+
+.titulo-formulario {
+  font-size: 21px;
+  color: white;
+  text-align: center;
+}
+
+.boton-enviar {
+  width: 112px;
+}

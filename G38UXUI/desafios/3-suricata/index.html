@@ -15,16 +15,33 @@
     body {
       font-family: 'Open Sans', sans-serif;
     }
-
     .navbar {
       background-color: #E83E8C;
     }
-
     .titulo {
       color: #707070;
       font-size: 35px;
       text-align: center;
 
+    }
+
+    .margin-top-30 {
+      margin-top: 30px;
+    }
+
+    .mt-8 {
+      margin-top: 32px;
+    }
+
+    .card {
+      cursor: pointer;
+      transition: box-shadow .2s ease-in-out;
+      width: 200px;
+      height: 200px;
+    }
+
+    .card:hover {
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
     }
   </style>
 </head>
@@ -41,7 +58,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
@@ -79,7 +96,7 @@
     <h1 class="titulo">Nuestros Productos</h1>
 
     <section>
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-12 col-md-4">
             <div class="card">
