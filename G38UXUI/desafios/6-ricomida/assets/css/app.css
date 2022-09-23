@@ -1,0 +1,34 @@
+body {
+  font-family: 'Cabin', sans-serif;
+  color: #373A3C;
+}
+
+.navbar {
+  background-color: #373a3c;
+}
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+  font-size: 37px;
+}
+
+.titulo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.subtitulo {
+  font-size: 16px;
+
+}
+
+.carousel-indicators {
+  top: 108%;
+}
+
+.carousel-indicators button {
+  width: 13px !important;
+  height: 13px !important;
+  border-radius: 50%;
+  background-color: red !important;
+}
