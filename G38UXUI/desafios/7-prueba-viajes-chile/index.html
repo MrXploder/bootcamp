@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/viajes.svg" width="30" height="30" />
+          Viajes Chile
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#seccion-carousel">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#seccion-somos">Quienes somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#seccion-destacados">Destacados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="section-carousel" id="seccion-carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section-somos container mt-5" id="seccion-somos">
+      <h2 class="text-center">¿QUIENES SOMOS?</h2>
+      <hr class="mb-5">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="text-center bg-info">
+            <i class="fa fa-solid fa-plane fa-2x"></i>
+          </div>
+          <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo facilis repellendus
+            cumque quidem hic, nulla
+            laboriosam mollitia vel veniam doloremque labore reprehenderit? Quaerat delectus deserunt voluptatum saepe,
+            voluptates tenetur. Repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam enim nostrum
+            eius hic autem sunt veritatis a eum dolorem rerum, ab vitae architecto debitis, aliquid vel itaque atque!
+            Repellendus, doloribus.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo facilis repellendus
+            cumque quidem hic, nulla
+            laboriosam mollitia vel veniam doloremque labore reprehenderit? Quaerat delectus deserunt voluptatum saepe,
+            voluptates tenetur. Repudiandae! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae aliquid vero
+            suscipit non reprehenderit aut necessitatibus quas eveniet molestias recusandae eos, veritatis quam? Fugit
+            animi natus ut nostrum ad quibusdam!</p>
+          <div class="text-center bg-info">
+            <i class="fa fa-solid fa-mountain fa-2x"></i>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="text-center bg-info">
+            <i class="fa fa-solid fa-route fa-2x"></i>
+          </div>
+          <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo facilis repellendus
+            cumque quidem hic, nulla
+            laboriosam mollitia vel veniam doloremque labore reprehenderit? Quaerat delectus deserunt voluptatum saepe,
+            voluptates tenetur. Repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eius
+            suscipit velit ullam alias nam nisi consequatur nesciunt. Aut omnis aspernatur veniam? Officia accusantium
+            mollitia optio! Quae iure eveniet quidem?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-destacados container mt-5" id="seccion-destacados">
+      <h2 class="text-center">DESTACADOS</h2>
+      <hr class="mb-5">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <div class="card bg-info">
+            <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-title">Lorem ipsum</div>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam ipsa
+                accusamus fugiat nemo debitis!.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="card bg-info">
+            <img src="assets/img/card2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-title">Lorem ipsum</div>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam ipsa
+                accusamus fugiat nemo debitis!.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="card bg-info">
+            <img src="assets/img/card3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-title">Lorem ipsum</div>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam ipsa
+                accusamus fugiat nemo debitis!.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="card bg-info">
+            <img src="assets/img/card4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="card-title">Lorem ipsum</div>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veniam ipsa
+                accusamus fugiat nemo debitis!.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-contacto container mt-5" id="seccion-contacto">
+      <form>
+        <div class="mb-3">
+          <label for="formularioContactoNombre" class="form-label">Nombre</label>
+          <input type="texto" class="form-control" id="formularioContactoNombre" required minlength="10" maxlength="50">
+        </div>
+        <div class="mb-3">
+          <label for="formularioContactoAsunto" class="form-label">Asunto</label>
+          <input type="texto" class="form-control" id="formularioContactoAsunto" required minlength="1" maxlength="100">
+        </div>
+        <div class="mb-3">
+          <label for="formularioContactoMensaje" class="form-label">Mensaje</label>
+          <textarea id="formularioContactoMensaje" rows="3" class="form-control" required minlength="1"
+            maxlength="500"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-info">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <footer class=" bg-info p-5">
+    <div class="container">
+      <div class="row justify-content-between align-items-baseline">
+        <div class="col-12 col-sm-auto">
+          <h1>
+            VIAJES CHILE
+          </h1>
+        </div>
+        <div class="col-12 col-sm-auto">
+          <i class="fa-brands fa-2x me-1 fa-github"></i>
+          <i class="fa-brands fa-2x me-1 fa-linkedin"></i>
+          <i class="fa-brands fa-2x me-1 fa-facebook"></i>
+          <i class="fa-brands fa-2x me-1 fa-twitter"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>

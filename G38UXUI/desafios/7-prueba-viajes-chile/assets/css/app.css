@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.section-destacados img {
+  height: 120px;
+  object-fit: cover;
+}
